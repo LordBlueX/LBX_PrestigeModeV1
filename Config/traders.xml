@@ -1,0 +1,23 @@
+<configs>
+
+<append xpath="//trader_item_groups">
+	<trader_item_group name="exstatbooks" count="all">
+		<item name="HitNotes1" count="1" /> <!-- or try this version '<item name="youritemsname" />' without the count , changing the count to all to count each 1 item -->
+		<item name="CraftingBowsBasic1" count="1" />
+		<item name="HitNotes2" count="1" />
+		<item name="HitNotes3" count="1" />
+		<item name="HitNotes4" count="1" />
+	</trader_item_group>
+</append>
+
+<append xpath="/traders">
+	<trader_info id="11" reset_interval="1" override_buy_markup="3" allow_sell="false" >
+		<trader_items>
+			<item group="exstatbooks" />
+		</trader_items>
+	</trader_info>
+</append>
+
+
+
+</configs>

@@ -1,0 +1,17 @@
+<config>
+	<append xpath="/Sounds">
+	
+	<!-- FUTURE GUN SOUNDS -->
+	
+	
+	<!-- SMG Gun Sounds -->
+	<SoundDataNode name="lbxmgunsoundsv2_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+    <AudioClip ClipName="#@modfolder:Resources/LordBXfireSFXV2.unity3d?lbxGunSFX2"/>
+    <AudioClip ClipName="lbxGunSFX2" AltSound="true"/>
+    <AudioClip ClipName="lbxGunSFX2" AltSound="true"/>
+    <AudioClip ClipName="lbxGunSFX2" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+	</append>
+</config>

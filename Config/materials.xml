@@ -1,0 +1,112 @@
+<configs>
+
+<append xpath="/materials">
+
+<material id="MLBXBronze_shapes">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="320"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="2.05"/>
+	<property name="MaxDamage" value="12000"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="MLBXREFBronze_shapes">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="320"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="2.05"/>
+	<property name="MaxDamage" value="13000"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="MLBXSilver_shapes">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="320"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="2.06"/>
+	<property name="MaxDamage" value="13500"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="MLBXRefSilver_shapes">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="320"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="2.07"/>
+	<property name="MaxDamage" value="14000"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="MbronzeFence">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="300"/>
+	<property name="movement_factor" value="0.18"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="MrefbronzeFence">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="400"/>	<!-- Health of the Trap-->
+	<property name="movement_factor" value="0.19"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="MSilvsFence">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="450"/>	<!-- Health of the Trap-->
+	<property name="movement_factor" value="0.21"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="MRefSilvsFence">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="500"/>	<!-- Health of the Trap-->
+	<property name="movement_factor" value="0.22"/>
+	<property name="Experience" value="2"/>
+</material>
+
+
+</append>
+
+</configs>

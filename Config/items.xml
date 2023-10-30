@@ -1,0 +1,1906 @@
+<configs>
+
+<append xpath="/items">
+
+<item name="LBXDragonikAKBase">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="CustomIcon" value="BaseDG1"/>
+	<property name="HoldType" value="48"/>
+	<property name="Meshfile" value="#@modfolder:Resources/AKDragonBasikVerV5.unity3d?LBXBaseDracoAKV5.prefab"/>
+	<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
+
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+
+	<property name="RepairTools" value="FNFFixITKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="ShowQuality" value="true"/>
+	<!-- <property name="UnlockedBy" value="perkMachineGunner,craftingEX"/> -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP"/>
+		<property name="Sound_start" value="lbxmgunsoundsv2_fire"/>
+		<property name="Sound_loop" value="lbxmgunsoundsv2_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="ak47_fire_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_AK47"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_AK47_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00062,0,.055"/>
+	</property>
+
+	<effect_group name="LBXDragonikAKBase">
+		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="50" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="EntityDamage" operation="base_add" value="-5" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.15" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> <!-- random APM -->
+		<passive_effect name="MagazineSize" operation="perc_add" value="0,.122"/> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="360" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="40" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 2.85s -->
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.5" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".7" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="250,550" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+	</effect_group>
+</item>
+
+<item name="LBXBatmnSMG">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,firingMode,bottomAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="CustomIcon" value="BATSMGIcon2"/>
+	<property name="HoldType" value="6"/>
+	<property name="Meshfile" value="#@modfolder:Resources/LBXBatmanBasicSMGA21.unity3d?BatGunSMGV2.prefab"/>
+	<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="FNFFixITKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="smg_sight_in"/>
+	<property name="Sound_Sight_Out" value="smg_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<!-- <property name="UnlockedBy" value="perkGunslinger,craftingEX"/> -->
+	<property name="ShowQuality" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP"/>
+		<property name="Reload_time" value="5.1"/>
+		<property name="Sound_start" value="lbxmgunsoundsv2_fire"/>
+		<property name="Sound_loop" value="lbxmgunsoundsv2_fire"/>
+		<property name="Sound_end" value="smg_fire_end"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value=""/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_SMG"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_SMG_fpv"/>
+		<!-- <property name="DamageBonus.head" value="4"/>
+		<property name="DamageBonus.wood" value="5"/>
+		<property name="DamageBonus.earth" value=".2"/> -->
+		<property name="ScopeOffset" value="-.000525,.1449,-.2"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="-.062,.062,.16"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.0003,0,-.01"/>
+	</property>
+
+	<effect_group name="LBXBatmnSMG">
+		<passive_effect name="MaxRange" operation="base_set" value="67" tags="perkGunslinger,9mmGun"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="35" tags="perkGunslinger,9mmGun"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkGunslinger,9mmGun"/> <!-- random effective rng -->
+		<passive_effect name="EntityDamage" operation="base_add" value="10" tags="perkGunslinger"/> <!-- damage offset -->
+
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="480" tags="perkGunslinger"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkGunslinger"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="39" tags="perkGunslinger"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkGunslinger"/> <!-- 4s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.03" tags="perkGunslinger"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/> <!-- random APM -->
+		<passive_effect name="MagazineSize" operation="perc_add" value="0,.122"/> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.35" tags="perkGunslinger"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.35" tags="perkGunslinger"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".35" tags="perkGunslinger"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkGunslinger"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5" tags="perkGunslinger"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1" tags="perkGunslinger"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.3" tags="perkGunslinger"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".3" tags="perkGunslinger"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.6" tags="perkGunslinger,9mmGun"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".8" tags="perkGunslinger"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="400,800" tier="1,6" tags="perkGunslinger,9mmGun"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
+	</effect_group>
+</item>
+
+
+<item name="FNFScrapMetalParts">
+	<property name="CustomIcon" value="LBXScrapM1"/>
+	<property name="DescriptionKey" value="FNFScrapMetalPartsDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="40"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+
+<item name="FNFFixITKit">
+	<property name="HoldType" value="45"/>
+	<property name="DescriptionKey" value="FNFFixITKitDesc"/>
+	<property name="CustomIcon" value="FNFToolzKitsV2"/>
+	<property name="Tags" value="junk"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Msteel"/>
+	<property name="Stacknumber" value="30"/> <!-- STK resourceRepairKit A20 was 15 -->
+	<property name="EconomicValue" value="250"/>
+	<property name="RepairTime" value="10"/>
+	<property name="RepairAmount" value="30000"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+
+<item name="COINZ">
+	<property name="CustomIcon" value="COINZToken"/>
+	<property name="DescriptionKey" value="COINZDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="50"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="LBXCanteenEmpty">
+	<property name="HoldType" value="3"/>
+	<property name="CustomIcon" value="EmptyCanteen3IIBeta"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Ecanteen.unity3d?WaterCanteenEMPTY.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="250"/> <!-- STK resource -->
+	<property name="Weight" value="10"/>
+	<property name="EconomicValue" value="6"/>
+	<property name="CraftingIngredientTime" value="9"/>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="ExchangeItem"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Change_item_to" value="LBXCanteenMURKY"/>
+		<property name="Do_block_action" value="deplete1"/>
+		<property name="Focused_blockname_1" value="pedestalSink"/>
+		<property name="Focused_blockname_2" value="wallMountSinkCommercial"/>
+		<property name="Focused_blockname_3" value="counterMountedSinkCommercialOffset"/>
+		<property name="Focused_blockname_4" value="counterMountedSinkCommercial"/>
+		<property name="Focused_blockname_5" value="sinkKitchen"/>
+		<property name="Focused_blockname_6" value="utilitySink"/>
+		<property name="Focused_blockname_7" value="showerHead"/>
+		<property name="Focused_blockname_8" value="showerHead02"/>
+		<property name="Focused_blockname_9" value="cntBathTubEmpty"/>
+		<property name="Focused_blockname_10" value="cntBathTubGore"/>
+		<property name="Focused_blockname_11" value="cntBathTubsRandomLootHelper"/>
+		<property name="Focused_blockname_12" value="decoClawFootBathTub"/>
+		<property name="Focused_blockname_13" value="cntToilet01"/>
+		<property name="Focused_blockname_14" value="cntToilet02"/>
+		<property name="Focused_blockname_15" value="urinalCommercialMounted"/>
+		<property name="Focused_blockname_16" value="cntToilet03"/>
+		<property name="Focused_blockname_17" value="drinkingfountainSingle"/>
+		<property name="Focused_blockname_18" value="urinalCommercialMounted"/>
+		<property name="Focused_blockname_19" value="drinkingfountainDouble"/>
+		<property name="Sound_start" value="bucketfill_water"/>
+		<property name="Group" value="Resources"/>
+	</property>
+</item>
+
+<item name="LBXCanteenMURKY">
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="waterDysentery"/>
+	<property name="CustomIcon" value="MurkyCanteen2"/>
+	<property name="Meshfile" value="#@modfolder:Resources/MURKEYcanteen6XX.unity3d?DirtyWTR1.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="200"/> <!-- STK resource -->
+	<property name="Weight" value="10"/>
+	<property name="EconomicValue" value="20"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="CraftingIngredientTime" value="10"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="LBXCanteenEmpty"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+
+	<effect_group tiered="false" name="Drink Tier 0">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="15"/>
+		<display_value name="dStaminaRegen" value=".15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchDrink">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<item name="LBXCanteenCLEANWATER">
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="waterDysentery"/>
+	<property name="CustomIcon" value="CanteenBoiledCleanWTR1"/>
+	<property name="Meshfile" value="#@modfolder:Resources/CLENWTRCanteen.unity3d?CANTEENCLEANWTRS.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="50"/> <!-- STK drink -->
+	<property name="Weight" value="10"/>
+	<property name="EconomicValue" value="40"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="LBXCanteenEmpty"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+
+	<effect_group tiered="false" name="Drink Tier 0/1">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="45"/>
+		<display_value name="dStaminaRegen" value=".15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<item name="resourceLBXOre"> <!-- LBX Ore -->
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="LBXORE1"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceScrapIron"/>
+	<property name="Weight" value="1"/>
+	<property name="Stacknumber" value="8000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="40"/>
+	<property name="Group" value="Resources"/>
+	<property name="RepairTime" value=".5"/>
+	<property name="RepairAmount" value="20"/>
+	<property name="CraftingIngredientTime" value=".2"/>
+</item>
+
+<item name="resourceLBXBronzeIngot">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="BRONZEINGOT1"/>
+	<property name="Tags" value="gems"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceSilverNugget"/>
+	<property name="Stacknumber" value="3000"/> <!-- STK loot -->
+	<property name="EconomicValue" value="100"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="resourceLBXReinforcedBronzeIngot">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="ReinforcedBRONZEIngots"/>
+	<property name="Tags" value="gems"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceSilverNugget"/>
+	<property name="Stacknumber" value="5000"/> <!-- STK loot -->
+	<property name="EconomicValue" value="150"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+
+<item name="toolLBXStovePot">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="LBXPOT3X"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Miron"/>
+	<property name="Stacknumber" value="250"/> <!-- STK loot -->
+	<property name="EconomicValue" value="26"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="ItemTypeIcon" value="campfire"/>
+</item>
+
+<item name="toolLBXStovePan">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="LBXPan3X"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Miron"/>
+	<property name="Stacknumber" value="250"/> <!-- STK loot -->
+	<property name="EconomicValue" value="26"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="ItemTypeIcon" value="campfire"/>
+</item>
+
+<item name="toolLBXKitchenUtil">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="LBXUtil3X"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Miron"/>
+	<property name="Stacknumber" value="250"/> <!-- STK loot -->
+	<property name="EconomicValue" value="26"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="ItemTypeIcon" value="campfire"/>
+</item>
+
+<item name="LBXEmptyCans">
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="LBXEmptyCan2"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="200"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="CraftingIngredientTime" value="9"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="foodCANNEDBaconAndEggs">
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="LBXBACandEggsCanIcon2"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property name="EconomicValue" value="72"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+		<property name="Create_item" value="LBXEmptyCans"/>
+	</property>
+	<property name="Smell" value="largeSmell"/>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="37"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="11"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodHoneyOoze">
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="HoneysOozes1"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<!-- <property name="Weight" value="5"/> -->
+	<property name="EconomicValue" value="1"/>
+	<property name="Stacknumber" value="100"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- <property name="Create_item" value="drinkCanEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 0">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodHoneyCombs">
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="HoneysCombes1"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<!-- <property name="Weight" value="5"/> -->
+	<property name="EconomicValue" value="1"/>
+	<property name="Stacknumber" value="100"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- <property name="Create_item" value="drinkCanEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 0">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+
+<item name="foodLBXMeat">
+	<property name="Tags" value="food,dumpsterFood,foodSkill"/>
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="LBXMeat1"/>
+	<property name="DisplayType" value="foodRaw"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MfoodRawMeat"/>
+	<property name="Stacknumber" value="125"/> <!-- STK food -->
+	<!-- <property name="EconomicBundleSize" value="5"/> -->
+	<property name="EconomicValue" value="20"/>
+	<property name="CraftingIngredientTime" value="3"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Smell" value="ExLargeSmell"/>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 0">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/><display_value name="foodHealthAmount" value="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="foodLBXBoiledMeat">
+	<property name="Tags" value="food,foodSkill"/>
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="LBXBoiledMeatss"/>
+	<property name="DisplayType" value="foodWater"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="50"/> <!-- STK food -->
+	<property name="EconomicValue" value="52"/>
+	<property name="CraftingIngredientTime" value="3"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodLBXMeatandHoney">
+	<property name="Tags" value="food,foodSkill"/>
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="LBXMeatAndHoney1"/>
+	<property name="DisplayType" value="foodWater"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="40"/> <!-- STK food -->
+	<property name="EconomicValue" value="52"/>
+	<property name="CraftingIngredientTime" value="3"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="17"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="13"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		
+		<display_value name="dCureInfection" value=".05"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+	</effect_group>
+</item>
+
+<item name="foodLBXHoneyCloth">
+	<property name="Tags" value="food,foodSkill"/>
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="LBXHoneyCloth1"/>
+	<property name="DisplayType" value="foodWater"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="40"/> <!-- STK food -->
+	<property name="EconomicValue" value="52"/>
+	<property name="CraftingIngredientTime" value="3"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="0"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		
+		<display_value name="dCureInfection" value=".08"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="8"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+		
+		<display_value name="dStopsBleeding" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
+	</effect_group>
+</item>
+
+<item name="foodBoiledCANNEDBaconAndEggs">
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="CustomIcon" value="LBXBOILEDBaconandeggsCanned"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="20"/> <!-- STK food -->
+	<property name="EconomicValue" value="72"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+		<property name="Create_item" value="LBXEmptyCans"/>
+	</property>
+	<property name="Smell" value="largeSmell"/>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="40"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="22"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="gunDraconicDblShotty">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,dBarrel,barrelAttachments,sideAttachments,stock,bottomAttachments,attStrength,perkBoomstick,canHaveCosmetic,attachmentsIncluded,shotgunSkill"/>
+	<property name="DisplayType" value="rangedShotgunNoMag"/>
+	<property name="CustomIcon" value="DraconixTierShottyIconV1"/>
+	<property name="HoldType" value="56"/>
+	<property name="Meshfile" value="#@modfolder:Resources/DragonsShottyV8A21.unity3d?DragonicShottysV8.prefab"/>
+	<property name="Material" value="MShotgunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="RepairTools" value="DraconicsRepairKitz"/> <!-- Will be changed to DraconicRepairKits -->
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug"/> <!-- will change this in the future-->
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="shotgundb_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_doublebarrel"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_doublebarrel_fpv"/>
+		<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
+		<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+        	<property name="triggerEffectTriggerPullDualsense" value="ShotgunTrigger"/>
+        	<property name="triggerEffectTriggerPullXbox" value="ShotgunTrigger"/>
+        	<property name="triggerEffectShootDualsense" value="ShotgunShoot"/>
+        	<property name="triggerEffectShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,-.005,0"/>
+	        <property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+	        <property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+	</property>
+	<effect_group name="gunDraconicDblShotty">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="100" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="4" tags="perkBoomstick"/>
+		 <!-- <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/>2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="1" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.03" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".06,.26" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="4.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.5" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.7" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="300,450" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+	</effect_group>
+</item>
+
+<item name="meleeWpnDraconicKnuckles">
+	<property name="Tags" value="blunt,melee,grunting,light,perkFlurryOfFortitude,weapon,attFortitude,perkBrawler,canHaveCosmetic,knuckleSkill"/>
+	<property name="Material" value="MleatherKnuckles"/>
+	<property name="Meshfile" value="#@modfolder:Resources/DragonixKnuxRIGHT7.unity3d?DraconixKnux25.prefab"/>
+	<property name="HoldType" value="70"/>
+	<property name="RepairTools" value="DraconicsRepairKitz"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="CustomIcon" value="DragonicKnuxIcon1"/>
+	<property name="Canhold" value="true"/>
+	<property name="EconomicValue" value="45"/>
+	<property name="TraderStageTemplate" value="baseTier0"/>
+	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Damage_type" value="Bashing"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".3"/>
+		<property name="GrazeEnd" value=".5"/>
+		<property name="SwingDegrees" value="90"/>
+		<property name="SwingAngle" value="30"/>
+		<property name="Sound_start" value="knuckles_wrap_swinglight"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="organichitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="organichitcloth"/>
+		</property>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".1"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="UsePowerAttackAnimation" value="true"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".35"/>
+		<property name="GrazeEnd" value=".4"/>
+		<property name="SwingDegrees" value="30"/>
+		<property name="SwingAngle" value="90"/>
+		<property name="Sound_start" value="knuckles_wrap_swingheavy"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="organichitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="organichitcloth"/>
+		</property>
+	</property>
+	<effect_group name="meleeWpnDraconicKnuckles">
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="110" tags="perkBrawler,perkFlurryOfFortitude"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="9.1" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="200,300" tier="1,6" tags="perkBrawler"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBrawler"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.0" tags="perkBrawler"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3" tags="perkBrawler"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="21" tags="perkBrawler"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBrawler"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="2.2" tags="perkBrawler"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBrawler"/> <!-- tier bonus -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#@modfolder:Resources/DragonixKnuxRIGHT7.unity3d?DraconixKnux25.prefab" parentTransform="Propjoint" localPos="0,0,0" localRot="0,0,0">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#@modfolder:Resources/DragonixKnuxRIGHT7.unity3d?DraconixKnux25.prefab" parentTransform="LeftHand" localPos="-0.091,-0.0075,-0.00077" localRot="3.841982,9.94,94.3">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftKnuckles"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/> -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="15.5" tags="secondary"/>
+	</effect_group>
+	
+	<effect_group name="corpseRemoval">
+		<requirement name="!IsAlive" target="other"/>
+		<requirement name="EntityTagCompare" target="other" tags="walker,crawler,spider"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="500"/>
+	</effect_group>
+</item>
+
+<item name="DraconicsRepairKitz">
+	<property name="HoldType" value="45"/>
+	<property name="DescriptionKey" value="DraconicsRepairKitzDesc"/>
+	<property name="CustomIcon" value="DracoRepairKit1"/>
+	<property name="Tags" value="junk"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Msteel"/>
+	<property name="Stacknumber" value="40"/> <!-- STK resourceRepairKit A20 was 15 -->
+	<property name="EconomicValue" value="200"/>
+	<property name="RepairTime" value="10"/>
+	<property name="RepairAmount" value="30000"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="DraconicBones">
+	<property name="CustomIcon" value="DracoBones1"/>
+	<property name="DescriptionKey" value="DraconicBonesDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="50"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+
+<item name="resourceLBXSilverIngot">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="SILVRingots"/>
+	<property name="Tags" value="gems"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceSilverNugget"/>
+	<property name="Stacknumber" value="5000"/> <!-- STK loot -->
+	<property name="EconomicValue" value="155"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="resourceLBXReinforcedSilverIngot">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="ReinforcedSILVIngots"/>
+	<property name="Tags" value="gems"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceSilverNugget"/>
+	<property name="Stacknumber" value="5000"/> <!-- STK loot -->
+	<property name="EconomicValue" value="160"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="LBXRepairingWrench">
+	<property name="Tags" value="melee,light,tool,repairTool,longshaft,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic"/>
+	<property name="DisplayType" value="meleeRepairTool"/>
+	<property name="CustomIcon" value="LBXRepWrench1"/>
+	<property name="HoldType" value="32"/>
+	<property name="Meshfile" value="#@modfolder:Resources/LBXWrenchA21.unity3d?LBXRepairWrenchV2Prefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="GrazeStart" value=".12"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="45"/>
+		<property name="SwingAngle" value="135"/>
+		<property name="UseGrazingHits" value="true"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".64"/> <!-- Repair actions still need the delay amount -->
+		<property name="Repair_amount" value="1000"/>
+		<property name="Upgrade_hit_offset" value="-2"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="resourceLBXBronzeIngot,resourceLBXReinforcedBronzeIngot,resourceLBXSilverIngot,resourceLBXReinforcedSilverIngot"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>
+	<effect_group name="LBXRepairingWrench">
+		<passive_effect name="EntityDamage" operation="base_set" value="12" tags="perkMiner69r"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="22" tags="perkMiner69r"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="70" tags="perkMiner69r"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="17.1" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="280,955" tier="1,6" tags="perkMiner69r"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.2" tags="perkMiner69r"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3" tags="perkMiner69r"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random DegMax -->
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> <!-- random APM -->
+		<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> <!-- random StamLoss -->
+
+		<display_value name="dBlockRepairAmount" value="1000"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
+	</effect_group>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
+
+<item name="LBXCanteenBEER">
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="waterDysentery"/>
+	<property name="CustomIcon" value="CBEERZ"/>
+	<property name="Meshfile" value="#@modfolder:Resources/LBXA211CanteenBEERZZ.unity3d?C_Beer1Hold2.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="50"/> <!-- STK drink -->
+	<property name="Weight" value="10"/>
+	<property name="EconomicValue" value="20"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="LBXC-EmptyBeer"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+
+	<effect_group tiered="false" name="Drink Tier 3">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<display_value name="dStaminaRegen" value=".4"/>
+			<display_value name="dHealthLoss" value=".18"/>
+			<display_value name="dStunResist" value="1"/>
+			<display_value name="dDuration" value="60"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="add" value="63"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="set" value="183">
+				<requirement name="CVarCompare" cvar="$buffBeerDuration" operation="GT" value="183"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBeer2"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<item name="LBXCanteenCoffee">
+	<property name="Tags" value="drinks,foodSkill"/>
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="waterCoffee"/>
+	<property name="CustomIcon" value="C_MainCOFFEE"/>
+	<property name="Meshfile" value="#@modfolder:Resources/LBXA211CCoffeez.unity3d?CANT_COFFEEZ.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<!-- <property name="Weight" value="10"/> -->
+	<property name="Stacknumber" value="50"/> <!-- STK drink -->
+	<property name="EconomicValue" value="96"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="LBXC-EmptyCoffee"/>
+		<!-- <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+	<effect_group tiered="false" name="Drink Tier 1">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="28"/>
+		<display_value name="dStaminaRegen" value=".2"/>
+		<display_value name="dHypothermalResist" value="5"/>
+		<display_value name="dDuration" value="180"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="183"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="543">
+			<requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="543"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<item name="LBXC-EmptyBeer">
+	<property name="HoldType" value="3"/>
+	<property name="CustomIcon" value="C_EMPTYBeers"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Ecanteen.unity3d?WaterCanteenEMPTY.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="250"/> <!-- STK resource -->
+	<property name="Weight" value="10"/>
+	<property name="EconomicValue" value="6"/>
+	<property name="CraftingIngredientTime" value="9"/>
+	<property class="Action1">
+		<property name="Class" value="ExchangeItem"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Change_item_to" value="LBXCanteenBEER"/>
+		<property name="Do_block_action" value="deplete1"/>
+		<property name="Focused_blockname_1" value="wineBarrel"/>
+		<property name="Focused_blockname_2" value="wineBarrelSet"/>
+		<property name="Focused_blockname_2" value="wineBarrelPlain"/>
+		<property name="Focused_blockname_3" value="wineBarrelPlayer"/>
+		<property name="Focused_blockname_4" value="wineBarrelPlayerSecure"/>
+		<property name="Focused_blockname_5" value="wineBarrelSetPlayer"/>
+		<property name="Focused_blockname_6" value="wineBarrelSetPlayerSecure"/>
+		<property name="Focused_blockname_7" value="wineBarrelPlainPlayer"/>
+		<property name="Focused_blockname_8" value="wineBarrelPlainPlayerSecure"/>
+		<property name="Sound_start" value="bucketfill_water"/>
+	</property>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="LBXC-EmptyCoffee">
+	<property name="HoldType" value="3"/>
+	<property name="CustomIcon" value="C_EmptyCoffee1"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Ecanteen.unity3d?WaterCanteenEMPTY.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="250"/> <!-- STK resource -->
+	<property name="Weight" value="10"/>
+	<property name="EconomicValue" value="6"/>
+	<property name="CraftingIngredientTime" value="9"/>
+	<property class="Action1">
+		<property name="Class" value="ExchangeItem"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Change_item_to" value="LBXCanteenCoffee"/>
+		<property name="Do_block_action" value="deplete1"/>
+		<property name="Focused_blockname_1" value="cntCoffeeMaker"/>
+		<property name="Focused_blockname_2" value="cntCoffeeMakerCommercial"/>
+		<property name="Sound_start" value="bucketfill_water"/>
+		<property name="Group" value="Resources"/>
+	</property>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="FNFToolTableSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="DescriptionKey" value="FNFToolTableSchematicDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="Tools4Trades"/>
+	<property name="Unlocks" value="FNFToolTable"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="FNFToolTable" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+	</effect_group>
+</item>
+
+<item name="LBXCookingStovesSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="DescriptionKey" value="LBXCookingStovesSchematicDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="LBXStovIcon"/>
+	<property name="Unlocks" value="LBXCookingStoves"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LBXCookingStoves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+	</effect_group>
+</item>
+
+<item name="LBX_CoopSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="DescriptionKey" value="LBX_CoopSchematicDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="LBXChickenBucketEMPTY2"/>
+	<property name="Unlocks" value="LBX_Coop"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LBX_Coop" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+	</effect_group>
+</item>
+
+<item name="LBX_BeehiveBoxSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="DescriptionKey" value="LBX_BeehiveBoxSchematicDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="BeehiveBoxEmpty1"/>
+	<property name="Unlocks" value="LBX_BeehiveBox"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LBX_BeehiveBox" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+	</effect_group>
+</item>
+
+<item name="LBXMelterSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="DescriptionKey" value="LBXMelterSchematicDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="LBXMELTERICON"/>
+	<property name="Unlocks" value="LBXMelter"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LBXMelter" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+	</effect_group>
+</item>
+
+<item name="LBXOreSeedsSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="DescriptionKey" value="LBXOreSeedsDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="LBXSEEDSLING1"/>
+	<property name="Unlocks" value="LBXOreSeeds"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LBXOreSeeds" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+	</effect_group>
+</item>
+
+<item name="Prestige1Token">
+	<property name="CustomIcon" value="PRESTIGETOKN1"/>
+	<property name="DescriptionKey" value="Prestige1TokenDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/Prestiges1Tokenzx.unity3d?DraconicTokenz2Prefabs"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="10"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="HitNotes1">
+	<property name="Extends" value="questMaster" />
+	<property name="CustomIcon" value="QuestPAPERICONTEST1"/>
+	<property name="DescriptionKey" value="HitNotes1Desc"/>
+	<property name="EconomicValue" value="340"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHunting" />
+	</property>
+</item>
+
+<item name="Prestige1Notes1">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="QuestPAPERICONTESTPresT1"/>
+	<property name="DescriptionKey" value="Prestige1Notes1Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingP1" />
+	</property>
+</item>
+
+<item name="LBXWheats">
+	<property name="CustomIcon" value="WheatsICONZ1"/>
+	<property name="DescriptionKey" value="LBXWheatsDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mplants"/>
+	<property name="Stacknumber" value="500"/> <!-- STK resource -->
+	<property name="EconomicValue" value="5"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="foodLBXLoafBread">
+	<property name="Tags" value="food,foodSkill"/>
+	<property name="CustomIcon" value="LoafofBreads1"/>
+	<property name="DescriptionKey" value="foodLBXLoafBreadDesc"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property name="EconomicValue" value="10"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 7">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="7"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodLBXSlicedBread">
+	<property name="Tags" value="food,foodSkill"/>
+	<property name="CustomIcon" value="SliceOfBreads1"/>
+	<property name="DescriptionKey" value="foodLBXSlicedBreadDesc"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="25"/> <!-- STK food -->
+	<property name="EconomicValue" value="8"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 8">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodLBXStuffedPotatoBread">
+	<property name="Tags" value="food,foodSkill"/>
+	<property name="CustomIcon" value="StuffedPotatoBread1"/>
+	<property name="DescriptionKey" value="foodLBXStuffedPotatoBreadDesc"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="25"/> <!-- STK food -->
+	<property name="EconomicValue" value="8"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 9">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="Prestige2Token">
+	<property name="CustomIcon" value="ENDZIconsP2"/>
+	<property name="DescriptionKey" value="Prestige2TokenDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/Prestiges2EndsZTkens1.unity3d?ENDZTOKENZ1Prefabs"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="11"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="resourceLBXRubyriteGem">
+	<property name="CustomIcon" value="RubyRiteGEM"/>
+	<property name="DescriptionKey" value="resourceLBXRubyriteGemDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="15"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="resourceLBXSapphiriteGem">
+	<property name="CustomIcon" value="SapphiriteGEM1"/>
+	<property name="DescriptionKey" value="resourceLBXSapphiriteGemDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="15"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="Prestige2Notes1">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="QuestPrestige2ENDZ1"/>
+	<property name="DescriptionKey" value="Prestige2Notes1Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingPrest2" />
+	</property>
+</item>
+
+<item name="SapphirearmorMilitaryVest">
+	<property name="Extends" value="armorMilitaryMaster"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="CustomIcon" value="armorMilitaryVest"/>
+	<property name="CustomIconTint" value="0450FE"/>
+	<property name="DescriptionKey" value="SapphirearmorMilitaryVestDesc"/>
+	<!--<property name="UnlockedBy" value="craftingEX"/> -->
+	<property name="ShowQuality" value="true"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg,armorLightSkill"/>
+	<property name="EquipSlot" value="Chest"/>
+	<effect_group name="military armor">
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,5,6" tier="1,2,3,4,5,6"/>  <!-- a good balance for Gem Armor -->
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="13,15" tier="1,6"/>  <!-- 13 ,15 is a good start for a GEM Armor -->
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="-.2,.2"/> 
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="13,15" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-.2,.2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.05,0.061" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="400,500" tier="1,6"/> <!-- 400 , 500 is a good start for GEM Armor -->
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.56"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_vest"/>
+		<property name="Overlay0" value="armor_kevlar_vest"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+		<property name="Overlay0Tint" value="4, 80, 254"/>
+	</property>
+</item>
+
+<item name="CraftingBowsBasic1">
+	<property name="Extends" value="questMaster" />
+	<property name="CustomIcon" value="QuestPAPERICONTEST1"/>
+	<property name="DescriptionKey" value="CraftingBowsBasic1Desc"/>
+	<property name="EconomicValue" value="25"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_BC1" />
+	</property>
+</item>
+
+<item name="RubyritearmorMilitaryVest">
+	<property name="Extends" value="armorMilitaryMaster"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="CustomIcon" value="armorMilitaryVest"/>
+	<property name="CustomIconTint" value="F10000"/>
+	<property name="DescriptionKey" value="RubyritearmorMilitaryVestDesc"/>
+	<!--<property name="UnlockedBy" value="craftingEX"/> -->
+	<property name="ShowQuality" value="true"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg,armorLightSkill"/>
+	<property name="EquipSlot" value="Chest"/>
+	<effect_group name="military armor">
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,5,6" tier="1,2,3,4,5,6"/>  <!-- a good balance for Gem Armor -->
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="16,18" tier="1,6"/>  <!-- 13 ,15 is a good start for a GEM Armor -->
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="-.2,.2"/> 
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="16,18" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-.2,.2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.05,0.061" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="550,600" tier="1,6"/> <!-- 400 , 500 is a good start for GEM Armor -->
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.56"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_vest"/>
+		<property name="Overlay0" value="armor_kevlar_vest"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+		<property name="Overlay0Tint" value="241, 0, 0"/>
+	</property>
+</item>
+
+<item name="Prestige3Token">
+	<property name="CustomIcon" value="BristonsPrestige3Token1"/>
+	<property name="DescriptionKey" value="Prestige3TokenDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/Prestige3BristonTokens.unity3d?BristonP3TokenzPrefabs"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="11"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="resourceLBXEmeraldriteGem">
+	<property name="CustomIcon" value="EmeraldriteGEM1"/>
+	<property name="DescriptionKey" value="resourceLBXEmeraldriteGemDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceMetalPipe"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="16"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+	<!-- *** EX_Skill_Magazine -->
+<item name="EXSkillMagazine">
+	<property name="Extends" value="masterSkillMagazine"/>
+	<property name="Tags" value="EXCSM"/>
+	<property name="CustomIcon" value="EXCMags"/>
+	<property name="DescriptionKey" value="EXSkillMagazineDesc"/>
+	<property name="Unlocks" value="craftingEX"/>
+	<property name="PickupJournalEntry" value="ExCraftingTip"/>
+	
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingEX" level="1"/> <!-- level="-1" sets a perk to max level -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="LBXNeoSaber">
+	<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfAgility,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
+	<property name="DisplayType" value="meleeKnife"/>
+	<property name="CustomIcon" value="NeoZaber1"/>
+	<property name="DescriptionKey" value="LBXNeoSaberDesc"/>
+	<property name="HoldType" value="36"/>
+	<property name="Meshfile" value="#@modfolder:Resources/NeoZZabers1.unity3d?NVZSabers2S.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="FNFFixITKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="EconomicValue" value="350"/>
+	<!-- <property name="UnlockedBy" value="perkDeepCuts,craftingEX"/> -->
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="ShowQuality" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Damage_type" value="Piercing"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="5"/>
+
+		<property name="UseGrazingHits" value="false"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".35"/>
+		<property name="SwingDegrees" value="90"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Damage_type" value="Piercing"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="5"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="false"/>
+		<property name="GrazeStart" value=".2"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="80"/>
+		<property name="SwingAngle" value="140"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="LBXNeoSaber">
+		<passive_effect name="EntityDamage" operation="base_set" value="6.1" tags="perkDeepCuts,knife"/> <!-- meleeWpnBladeT1HuntingKnife -->
+		<passive_effect name="BlockDamage" operation="base_set" value="5.3" tags="perkDeepCuts"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="130" tags="perkDeepCuts,perkFlurryOfAgility"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="8.2" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="462,1154" tier="1,6" tags="perkDeepCuts"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.0" tags="perkDeepCuts"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2.5" tags="perkDeepCuts"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.17" tags="perkDeepCuts"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.17" tags="perkDeepCuts"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value=".6" tags="organic"/>
+		<!-- <passive_effect name="DamageModifier" operation="perc_add" value="0" tags="organic"/> affects organic block harvesting based on block.material.damage_category, not animal corpse harvesting -->
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
+		<!--<passive_effect name="BlockDamage" operation="perc_add" value="6" tags="blockButcher"/>-->
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="base_add" value="7" tags="secondary"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="base_add" value="-60" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="12.3" tags="secondary"/>
+	</effect_group>
+	<effect_group name="sneak damage bonus">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+			<passive_effect name="DamageBonus" operation="base_add" value="4"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="4" tags="perkDeepCuts"/>
+			<display_value name="dEntityDamageSneak" value="4"/>
+	</effect_group>
+	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
+
+<item name="meleeWpnBristonsBCLWS">
+	<property name="Tags" value="blunt,melee,grunting,light,perkFlurryOfFortitude,weapon,attFortitude,perkBrawler,canHaveCosmetic,knuckleSkill"/>
+	<property name="Material" value="MleatherKnuckles"/>
+	<property name="Meshfile" value="#@modfolder:Resources/LBXBCLAWS2.unity3d?LordBristinsCLWS2.prefab"/>
+	<property name="HoldType" value="70"/>
+	<property name="RepairTools" value="FNFFixITKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="CustomIcon" value="BristonsBClaws1"/>
+	<property name="DescriptionKey" value="meleeWpnBristonsBCLWSDesc"/>
+	<property name="Canhold" value="true"/>
+	<property name="EconomicValue" value="45"/>
+	<!-- <property name="UnlockedBy" value="perkBrawler,craftingEX"/> -->
+	<property name="TraderStageTemplate" value="baseTier0"/>
+	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Damage_type" value="Bashing"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".3"/>
+		<property name="GrazeEnd" value=".5"/>
+		<property name="SwingDegrees" value="90"/>
+		<property name="SwingAngle" value="30"/>
+		<property name="Sound_start" value="knuckles_wrap_swinglight"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="organichitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="organichitcloth"/>
+		</property>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".1"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="UsePowerAttackAnimation" value="true"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".35"/>
+		<property name="GrazeEnd" value=".4"/>
+		<property name="SwingDegrees" value="30"/>
+		<property name="SwingAngle" value="90"/>
+		<property name="Sound_start" value="knuckles_wrap_swingheavy"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="organichitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="organichitcloth"/>
+		</property>
+	</property>
+	<effect_group name="meleeWpnBristonsBCLWS">
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="115" tags="perkBrawler,perkFlurryOfFortitude"/> <!-- For Briston More ASP -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="9.1" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="300,400" tier="1,6" tags="perkBrawler"/>  <!-- 300 - 400 Item HP -->
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBrawler"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.0" tags="perkBrawler"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3" tags="perkBrawler"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="24" tags="perkBrawler"/> <!-- from 21 , alittle Extra DMG -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBrawler"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="2.2" tags="perkBrawler"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBrawler"/> <!-- tier bonus -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#@modfolder:Resources/LBXBCLAWS2.unity3d?LordBristinsCLWS2.prefab" parentTransform="Propjoint" localPos="0,0,0" localRot="0,0,0">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#@modfolder:Resources/LBXBCLAWS2.unity3d?LordBristinsCLWS2.prefab" parentTransform="LeftHand" localPos="-0.091,-0.0075,-0.00077" localRot="3.841982,9.94,94.3">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftKnuckles"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/> -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="15.5" tags="secondary"/>
+	</effect_group>
+	
+	<effect_group name="corpseRemoval">
+		<requirement name="!IsAlive" target="other"/>
+		<requirement name="EntityTagCompare" target="other" tags="walker,crawler,spider"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="500"/>
+	</effect_group>
+</item>
+
+<item name="EmeraldritearmorMilitaryVest">
+	<property name="Extends" value="armorMilitaryMaster"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="CustomIcon" value="armorMilitaryVest"/>
+	<property name="CustomIconTint" value="00B902"/>
+	<property name="DescriptionKey" value="EmeraldritearmorMilitaryVestDesc"/>
+	<!--<property name="UnlockedBy" value="craftingEX"/> -->
+	<property name="ShowQuality" value="true"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg,armorLightSkill"/>
+	<property name="EquipSlot" value="Chest"/>
+	<effect_group name="military armor">
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,5,6" tier="1,2,3,4,5,6"/>  <!-- a good balance for Gem Armor -->
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="20,22" tier="1,6"/>  <!-- 13 ,15 is a good start for a GEM Armor -->
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="-.2,.2"/> 
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="16,18" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-.2,.2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.05,0.061" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,650" tier="1,6"/> <!-- 400 , 500 is a good start for GEM Armor -->
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.56"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_vest"/>
+		<property name="Overlay0" value="armor_kevlar_vest"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+		<property name="Overlay0Tint" value="0,185, 2"/>
+	</property>
+</item>
+
+<item name="HitNotes2">
+	<property name="Extends" value="questMaster" />
+	<property name="CustomIcon" value="QuestPAPERICONTEST1"/>
+	<property name="DescriptionKey" value="HitNotes2Desc"/>
+	<property name="EconomicValue" value="340"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingV2" />
+	</property>
+</item>
+
+<item name="HitNotes3">
+	<property name="Extends" value="questMaster" />
+	<property name="CustomIcon" value="QuestPAPERICONTEST1"/>
+	<property name="DescriptionKey" value="HitNotes3Desc"/>
+	<property name="EconomicValue" value="340"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingV3" />
+	</property>
+</item>
+
+<item name="HitNotes4">
+	<property name="Extends" value="questMaster" />
+	<property name="CustomIcon" value="QuestPAPERICONTEST1"/>
+	<property name="DescriptionKey" value="HitNotes4Desc"/>
+	<property name="EconomicValue" value="340"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingV4" />
+	</property>
+</item>
+
+<item name="Prestige1Notes2">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="QuestPAPERICONTESTPresT1"/>
+	<property name="DescriptionKey" value="Prestige1Notes2Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingP1V2" />
+	</property>
+</item>
+
+<item name="Prestige1Notes3">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="QuestPAPERICONTESTPresT1"/>
+	<property name="DescriptionKey" value="Prestige1Notes3Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingP1V3" />
+	</property>
+</item>
+
+<item name="Prestige2Notes2">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="QuestPrestige2ENDZ1"/>
+	<property name="DescriptionKey" value="Prestige2Notes2Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingPrest2V2" />
+	</property>
+</item>
+
+<item name="Prestige2Notes3">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="QuestPrestige2ENDZ1"/>
+	<property name="DescriptionKey" value="Prestige2Notes3Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingPrest2V3" />
+	</property>
+</item>
+
+<item name="Prestige3Notes1">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="Prestige3Quests"/>
+	<property name="DescriptionKey" value="Prestige3Notes1Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingPrest3V1" />
+	</property>
+</item>
+
+<item name="Prestige3Notes2">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="Prestige3Quests"/>
+	<property name="DescriptionKey" value="Prestige3Notes2Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingPrest3V2" />
+	</property>
+</item>
+
+<item name="Prestige3Notes3">
+	<property name="Extends" value="questMaster" />
+	<property name="UnlockedBy" value="PrestigeSet1"/>
+	<property name="CustomIcon" value="Prestige3Quests"/>
+	<property name="DescriptionKey" value="Prestige3Notes3Desc"/>
+	<property name="Group" value="Science"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_zombieHuntingPrest3V3" />
+	</property>
+</item>
+
+<item name="VigilanteVehiclePlaceable">
+    <property name="CustomIcon" value="LBXBATICONS" />
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkGreaseMonkey"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+    <property name="Meshfile" value="#@modfolder:/Resources/ZTAvehicles.unity3d?vehicleBatmobile03.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+    <property class="Action1">
+        <property name="Vehicle" value="VigilanteVehicle"/>
+        <property name="VehicleSize" value="2, 2, 2"/>
+    </property>
+    <effect_group name="VigilanteVehiclePlaceable" tiered="false">
+        <passive_effect name="ModSlots" operation="base_set" value="4"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="11000"/> <!-- Was 8000 for Vanilla -->
+    </effect_group>
+</item>
+	
+<item name="vehicleBATChasis">
+	<property name="CustomIcon" value="BATChasis1" />
+	<property name="Extends" value="vehicleWheels"/>
+	<property name="Tags" value="vehiclesSkill"/>
+	<property name="DescriptionKey" value="vehicleBATChasisDesc"/>
+	<property name="EconomicValue" value="10000"/>
+	<property name="TraderStageTemplate" value="vehicleTier3"/>
+	<property name="UnlockedBy" value="craftingVehicles"/><!-- perkGreaseMonkey -->
+</item>
+
+<item name="vehicleBATAccessories">
+	<property name="CustomIcon" value="BATAcess1" />
+	<property name="Extends" value="vehicleBicycleHandlebars"/>
+	<property name="Tags" value="vehiclesSkill"/>
+	<property name="DescriptionKey" value="vehicleBATAccessoriesDesc"/>
+	<property name="EconomicValue" value="10000"/>
+	<property name="TraderStageTemplate" value="vehicleTier3"/>
+	<property name="UnlockedBy" value="craftingVehicles"/><!-- perkGreaseMonkey -->
+</item>
+	
+<item name="BatEngine">
+	<property name="HoldType" value="45"/>
+	<property name="Tags" value="junk"/>
+	<property name="CustomIcon" value="BatEngine1" />
+	<property name="DescriptionKey" value="BatEngineDesc"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MsmallEngine"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="MmechanicalParts"/>
+	<property name="Weight" value="200"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="Group" value="Resources"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property class="Attributes">
+		<property name="DegradationMax" value="1000,6000"/> <!-- needed for electrical calculations -->
+		<property name="VehicleNoise" value="1,.1"/>
+		<property name="VehicleMaxSpeed" value="5,18"/>
+		<property name="VehicleAcceleration" value="7,14"/>
+		<property name="VehicleMetersPerLiter" value="8,12"/>
+		<property name="VehicleIdleSecondsPerLiter" value="6,12"/>
+		<property name="VehicleStartDelayInSeconds" value="1,.1"/>
+		<property name="VehicleStartChance" value=".5,.99"/>
+		<property name="VehicleTankSize" value="1000, 2000"/>
+		<property name="VehicleFuelItem" value="ammoGasCan"/>
+	</property>
+</item>
+
+<item name="ToyotaCelicasPlaceable">
+    <property name="CustomIcon" value="TOYOTACelicaBLU2002LBX" />
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkGreaseMonkey"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+    <property name="Meshfile" value="#@modfolder:/Resources/ZLBXvehicles.unity3d?vehicleTC200204.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+    <property class="Action1">
+        <property name="Vehicle" value="ToyotaCelicas"/>
+        <property name="VehicleSize" value="2, 2, 2"/>
+    </property>
+    <effect_group name="ToyotaCelicasPlaceable" tiered="false">
+        <passive_effect name="ModSlots" operation="base_set" value="4"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="9000"/> <!-- Was 8000 for Vanilla -->
+    </effect_group>
+</item>
+
+</append>
+
+</configs>

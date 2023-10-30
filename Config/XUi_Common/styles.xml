@@ -1,0 +1,14 @@
+<config>
+	<append xpath="/styles">
+	
+		<style name="player.hp.newbackground" type="texture">
+			<style_entry name="depth" value="4"/>
+			<style_entry name="height" value="34" />
+			<style_entry name="width" value="250" />
+			<style_entry name="pos" value="0,-120"/> 
+			<style_entry name="texture" value="@modfolder:/UI/PlayerStats/PlayerStats1.png" /> 
+		</style>
+	
+	</append>
+	
+</config>

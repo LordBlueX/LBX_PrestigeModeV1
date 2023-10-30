@@ -1,0 +1,291 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+FNFScrapMetalParts,Items,Resource,,,"LBX Scrap Metal"
+FNFScrapMetalPartsDesc,Items,Resource,,,"A Special Kind Of Resource Obtained From Scrapping Otherworldly Items.\nAs Well as Being Used To create New Otherworldly Items.\n-Can Only Be Crafted on FNFToolTable."
+FNFToolTable,blocks,Workstation,,,"FNFToolTable"
+FNFToolTableDesc,blocks,Workstation,,,"An Otherworldly Workbench Needed To Create Otherworldly Items.\nCan be crafted from the Workbench."
+FNFFixITKit,Items,Resource,,,"FNFFixITKit"
+FNFFixITKitDesc,Items,Resource,,,"A Special Type Of Repair Kit That Can Only Repair Items Crafted From FNFToolTable."
+COINZ,Items,Resource,,,"COINZ"
+COINZDesc,Items,Resource,,,"a coin that can be found on Zombie Loot Bags.\n-You Can use these coins as an exchange for:\n-LBX Scrap Metal.\n-Can only Exchanged on FNFToolTable."
+attEXmodeDesc,progression,Attribute,,,Here Are Some Extra Stats To Boost your Gameplay and to Survive Against Your Enemies.
+DescEXmode1,progression,Attribute,,,You will see a lot of Extra Stats to Boost here.\nthese Extra Stats Will Boost your Gameplay with Added Support.,,
+BL4KJ4K's Notes Vol.5,items,Item,Mission 4
+BL4KJ4K's Notes Vol.5Desc,items,Item,,,"BL4KJ4K Has Sent 4 Zombie Dogs After you! 'Release The Hounds!'."
+LBXCanteenEmpty,items,Food,,,"LBXCanteenEmpty"
+LBXCanteenEmptyDesc,items,Food,,,"An Empty Canteen.\nYou Can Create This From the Campfire using 10 Broken Glass."
+LBXCanteenMURKY,items,Food,,,"LBXC-Murky"
+LBXCanteenMURKYDesc,items,Food,,,"A Murky Canteen With Murky Water.\nYou Can Drink This For Water Although its Not Recommended ."
+LBXCanteenCLEANWATER,items,Food,,,"LBXC-Clean Water"
+LBXCanteenCLEANWATERDesc,items,Food,,,"A Clean Canteen With Boiled Water.\nYou Can Create this on you with 2 Boiled Waters.\nOr on The Campfire Cooking the LBXCanteenMURKY. "
+tooltipJammed,UI,Menu,,,{0} Use {1} [2596be](Jammed),,
+tooltipLocked,UI,Menu,,,{0} Use {1} [2596be](Locked),,
+tooltipUnlocked,UI,Menu,,,{0} Use {1} [2596be](Unlocked),,
+lootEntity,UI,Use Prompt,,,{0} Search {1} [2596be](Untouched),,
+lootTooltipEmpty,UI,Use Prompt,,,{1} [2596be](Empty),,
+lootTooltipNew,UI,Use Prompt,,,{0} Search {1} [2596be](Untouched),,
+pickupPrompt,UI,HUD,,,Press [2596be]{{0}}[-] to pick up: {0},,
+useCampfire,UI,HUD,,,Press [2596be]{0}[-] to use,,
+useForge,UI,HUD,,,Press [2596be]{0}[-] to use,,
+useSecureDoor,UI,HUD,,,Press [2596be]{0}[-] to open,,
+useWorkstation,UI,HUD,,,Press [2596be]{0}[-] to use,,
+LBX_Coop,Blocks,block,,,Chicken Coop Bin
+LBX_Coop_Desc,Blocks,block,,,"Generate your own eggs and feathers!\n\nObtained from FNFToolTable."
+LBX_Coop_Full,Blocks,block,,,Full Chicken Coop Bin
+LBX_BeehiveBox,Blocks,block,,,Beehive Box
+LBX_BeehiveBox_Desc,Blocks,block,,,"Generate your own healing honey!\n\nObtained by the FNFToolTable."
+LBX_BeehiveBox_Full,Blocks,block,,,Full Beehive Box
+resourceLBXOre,items,Item,,,LBX Ore,,
+resourceLBXOreDesc,items,Item,,,"An Otherworldly Ore resource for crafting. Keep These Ores Close By, Its Also Valueable for Selling.",,
+LBXBronzeShapes,blocks,Block,,,LBX Bronze Shapes,,
+LBXBronzeShapesDesc,blocks,Block,,,"A bronze block made from Bronze Ingots, You can use these blocks to build with, Making a Place to live in alot easier and can be upgraded with the LBXRepairWrench using the Refined Bronze Ingots. Place them by using the secondary action.\n\nRepair with Bronze Ingots.\nCrafted from the LBXMelter.",,
+resourceLBXBronzeIngot,items,Item,,,LBX Bronze Ingot,,
+resourceLBXBronzeIngotDesc,items,Item,,,"An Otherworldly Bronze Ingot resource for crafting Blocks, Repairing , and Upgrading Blocks. Keep These Ores Close By, Its Also Valueable for Selling.",,
+LBXRefinedBronzeShapes,blocks,Block,,,LBX Refined Bronze Shapes,,
+LBXRefinedBronzeShapesDesc,blocks,Block,,,"A refined bronze block made from Refined Bronze Ingots, You can use these blocks to build with, Making a Place to live in alot easier and can be upgraded with the LBXRepairWrench using the Silver Ingots. Place them by using the secondary action.\n\nRepair with Refined Bronze Ingots.\nCrafted from the LBXMelter.",,
+resourceLBXReinforcedBronzeIngot,items,Item,,,LBX Reinforced Bronze Ingot,,
+resourceLBXReinforcedBronzeIngotDesc,items,Item,,,"An Otherworldly Reinforced Bronze Ingot resource for crafting Blocks, Repairing , and Upgrading Blocks. Keep These Ores Close By, Its Also Valueable for Selling.",,
+foodCANNEDBaconAndEggs,items,Food,,,Canned Bacon & Eggs,,
+foodCANNEDBaconAndEggsDesc,items,Food,,,Bacon and eggs in a Can will really fill you up.\ngive you some water and boost your Maximum Stamina.\nIt May Sound Disgusting But Its Safer Then Eating It With your hands now.\nFood +37.\nHP +20.\nWater +10.\nStamina +11.,,
+toolLBXKitchenUtil,items,Item,,,LBX Kitchen Tools,,
+toolLBXKitchenUtilDesc,items,Item,,,A cooking tool used in the stove to unlock recipes.,,
+toolLBXStovePan,items,Item,,,LBX Stove Pan,,
+toolLBXStovePanDesc,items,Item,,,A cooking tool used in the stove to unlock recipes.,,
+toolLBXStovePot,items,Item,,,LBX Stove Pot,,
+toolLBXStovePotDesc,items,Item,,,A cooking tool used in the stove to unlock recipes.,,
+LBXCookingStoves,blocks,Workstation,,,LBXCookingStoves,,
+LBXCookingStovesDesc,blocks,Workstation,,,"Useful to cook food and warm up. Unlock more recipes by adding an LBX Stove Pot, Pan and Kitchen Tools.",,
+LBXEmptyCans,items,Food,,,LBX Empty Cans,,
+LBXEmptyCansDesc,items,Food,,,An empty can which you can get after eating custom foods or crafting it from the start.,,
+foodHoneyOoze,items,Food,,,Honey Ooze,,
+foodHoneyOozeDesc,items,Food,,,Its Honey Ooze Dripping Inside The BeeHive and Eat To.\ngive you some food and health.\nIts Better than eating glass.\nFood +3.\nHP +2.,,
+foodHoneyCombs,items,Food,,,Honey Combs,,
+foodHoneyCombsDesc,items,Food,,,Its Honey Combs Inside The BeeHive and Eat To.\ngive you some food and health.\nIts Better than eating glass.\nFood +3.\nHP +2.,,
+foodLBXMeat,items,Food,,,Really Raw Meat,,
+foodLBXMeatDesc,items,Food,,,Its Raw Meat Processed from Rotting Flesh.\nWorks Like Raw Meat.\nCooked Only From LBX Stove and Cook The Really Raw Meat.\nFor Something More Delectable.,,
+foodLBXBoiledMeat,items,Food,,,The Don'z Boiled Meat,,
+foodLBXBoiledMeatDesc,items,Food,,,Its Meat Boiled Nice and Fresh from The LBX Stove.\nWorks Like Boiled Meat.\nCooked Only From LBX Stove.\nIts Fairly Delectable.,,
+foodLBXMeatandHoney,items,Food,,,Meat O' Honey,,
+foodLBXMeatandHoneyDesc,items,Food,,,Its Meat Boiled With Honey Cooked from The LBX Stove.\nEat It Will Cure You From Infection.\nCooked Only From LBX Stove.\nIts Very Delectable.,,
+foodLBXHoneyCloth,items,Food,,,Medical Honey Cloth,,
+foodLBXHoneyClothDesc,items,Food,,,A simple cloth wrap to dress wounds. Use it to stop bleeding damage and Heal and Cure Infections.\nUse them to help you in a Pinch.,,
+foodBoiledCANNEDBaconAndEggs,items,Food,,,Canned Boiled B&Eggs,,
+foodBoiledCANNEDBaconAndEggsDesc,items,Food,,,Boiled Bacon and eggs in a Can will really fill you up.\ngive you some water and boost your Maximum Stamina.\nIt Sounds Tasty and Its Safer Then Eating It With your hands.\nFood +40.\nHP +22.\nWater +15.\nStamina +15.,,
+gunDraconicDblShotty,items,Gun,,,Draconic Double Barrel,,
+gunDraconicDblShottyDesc,items,Gun,,,"A double barrel shotgun Crafted with Draconic Bones.\n\nRepair with Dracon's Repair Kit.\nScrap to Shotgun Parts Which i Dont Reccommend.",,
+meleeWpnDraconicKnuckles,items,Melee,,,Draconic Knuckles,,
+meleeWpnDraconicKnucklesDesc,items,Melee,,,Draconic knuckle wraps to protect your hands and put some weight into those swings.\n\nRepair with Dracon's Repair Kit.\nScrap to Leather although i wouldn't reccommend it.,,
+DraconicsRepairKitz,Items,Resource,,,"Dracon's Repair Kit"
+DraconicsRepairKitzDesc,Items,Resource,,,"A Special Type Of Repair Kit That Can Only Repair Draconic Items Crafted From FNFToolTable."
+DraconicBones,Items,Resource,,,"Draconic Bones"
+DraconicBonesDesc,Items,Resource,,,"a rare type of Bone that can be found on Zombie Loot Bags.\n-You Can Craft These Draconic Bones from 100 Regular Zombie Bones and use these Bones as an exchange for:\n-Draconic Items.\n-Can only Exchanged on FNFToolTable."
+LBXSilversShapes,blocks,Block,,,LBX Silver Shapes,,
+LBXSilversShapesDesc,blocks,Block,,,"A Silver block made from Silver Ingots, You can use these blocks to build with, Making a Place to live in alot easier and can be upgraded with the LBXRepairWrench using the Refined Silver Ingots. Place them by using the secondary action.\n\nRepair with Silver Ingots.\nCrafted from the LBXMelter.",,
+LBXRepairingWrench,items,Item,,,LBX Repairing Wrench,,
+LBXRepairingWrenchDesc,items,Item,,,"An Otherworldly Wrench for Repairing and Upgrading Blocks. Keep This Wrench For Repairing and Fortifying your Base.",,
+LBXRefinedSilversShapes,blocks,Block,,,LBX Refined Silver Shapes,,
+LBXRefinedSilversShapesDesc,blocks,Block,,,"A Refined Silver block made from Refined Silver Ingots, You can use these blocks to build with, Making a Place to live in alot easier,In This Version, This is the Last Block and Cant Be Upgraded only repaired. Place them by using the secondary action.\n\nRepair with Silver Ingots.\nCrafted from the LBXMelter.",,
+resourceLBXSilverIngot,items,Item,,,LBX Silver Ingot,,
+resourceLBXSilverIngotDesc,items,Item,,,"An Otherworldly Silver Ingot resource for crafting Blocks, Repairing , and Upgrading Blocks. Keep These Ores Close By, Its Also Valueable for Selling.",,
+resourceLBXReinforcedSilverIngot,items,Item,,,LBX Reinforced Silver Ingot,,
+resourceLBXReinforcedSilverIngotDesc,items,Item,,,"An Otherworldly Reinforced Silver Ingot resource for crafting Blocks, Repairing , and Upgrading Blocks. Keep These Ores Close By, Its Also Valueable for Selling.",,
+BronzeFence,blocks,Trap,,,Bronze Fence,,
+BronzeFenceDesc,blocks,Trap,,,"Barbed wire bronze fences made from Bronze Ingots and iron can slow down enemies, making them easier to deal with. Place them by using the secondary action.\n\nRepair with Bronze Ingots.\nCrafted from the LBXMelter.",,
+RefBronzeFence,blocks,Trap,,,Refined Bronze Fence,,
+RefBronzeFenceDesc,blocks,Trap,,,"Barbed wire refined bronze fences made from Refined Bronze Ingots and iron can slow down enemies, making them easier to deal with. Place them by using the secondary action.\n\nRepair with Refined Bronze Ingots.\nCrafted from the LBXMelter.",,
+SilversFence,blocks,Trap,,,Silver Wired Fence,,
+SilversFenceDesc,blocks,Trap,,,"Barbed wire silver fences made from Silver Ingots and iron can slow down enemies, making them easier to deal with. Place them by using the secondary action.\n\nRepair with Silver Ingots.\nCrafted from the LBXMelter.",,
+RefSilversFence,blocks,Trap,,,Refined Silver Fence,,
+RefSilversFenceDesc,blocks,Trap,,,"Barbed wire refined silver fences made from Refined Silver Ingots and iron can slow down enemies, making them easier to deal with. Place them by using the secondary action.\n\nRepair with Refined Silver Ingots.\nCrafted from the LBXMelter.",,
+LBXOreSeeds,blocks,Block,,,LBX Ore Seed,,
+LBXOreSeedsDesc,blocks,Block,,,"An LBX Ore Seed That can grow into a Tree, A Tree Can Be Chopped To Get LBX Ores, And When Destroyed It'll Drop its Seed, Please Have a Green Thumb and Plant it.\nCrafted from the FNFToolTable with an Oak Seed and FNFScrapMetalParts.",,
+LBXOreTrees,blocks,Block,,,LBX Ore Tree,,
+LBXMelter,blocks,Workstation,,,"LBXMelter"
+LBXMelterDesc,blocks,Workstation,,,"An Otherworldly Melter Needed To Create Otherworldly Items.\nCan be crafted from the FNFToolTable."
+EXSkillMagazine,items,Food,,,EX Magizine Weekly,,
+EXSkillMagazineDesc,items,Food,,,Learn to craft items from another world.\n\nImproves EX crafting skill.,,
+craftingEXName,progression,Attribute,,,EX,,
+craftingEXDesc,progression,Attribute,,,Reading [DECEA3]EX Magazine Weekly[-] will unlock various tiers of Otherworldly items.\nFind These Magazines From ZBags,,Durch das Lesen von [DECEA3]EX Magizine Weekly[-]
+craftingEXName,progression,Attribute,,,EX,,
+craftingEXDesc,progression,Attribute,,,Reading [DECEA3]EX Magazine Weekly[-] will unlock various tiers of Otherworldly items.\nFind These Magazines From ZBags,,Durch das Lesen von [DECEA3]EX Magizine Weekly[-]
+craftingEXLongDesc,progression,Attribute,,x,CURRENTLY NOT USED,,,,,,,,,,,,,
+EXT1-1,progression,Attribute,,,Tier 1: LBX Weapons,,
+EXT2-1,progression,Attribute,,,Tier 2: LBX Gears,,
+buffDrunk02Desc,buffs,Buff,,,A nice Sip
+buffDrunk02Name,buffs,Buff,,,Sipped,,
+buffDrunk02Tooltip,buffs,Buff,,,A nice sip. You are feeling Stacked.,,
+LBXCanteenBEER,items,Food,,,"LBXC-Beer"
+LBXCanteenBEERDesc,items,Food,,,"A Canteen Filled With Beer.\nYou Can Create this on you with LBX Empty Canteen on a Wine Barrel.\n Drink This to Have some 18% DMG Resistance. "
+LBXCanteenCoffee,items,Food,,,"LBXC-Coffee"
+LBXCanteenCoffeeDesc,items,Food,,,"A Canteen Filled With Coffee.\nYou Can Create this on you with LBX Empty Canteen on a Coffee Maker.\n Drink This to Have some extra water and coffee. "
+LBXC-EmptyBeer,items,Food,,,"LBXC-Empty Beer"
+LBXC-EmptyBeerDesc,items,Food,,,"An Empty Beer Canteen.\nYou Can Create This from LBXCanteenEmpty, or to LBXC-Empty Coffee."
+LBXC-EmptyCoffee,items,Food,,,"LBXC-Empty Coffee"
+LBXC-EmptyCoffeeDesc,items,Food,,,"An Empty Coffee Canteen.\nYou Can Create This from LBXCanteenEmpty, or to LBXC-Empty Beer."
+FNFToolTableSchematic,Items,Gun,,,"FNF ToolTable Schematic"
+FNFToolTableSchematicDesc,Items,Gun,,,"When you read this you'll be able to craft.\n-FNF ToolTable."
+LBXCookingStovesSchematic,Items,Gun,,,"LBX Cooking Stove Schematic"
+LBXCookingStovesSchematicDesc,Items,Gun,,,"When you read this you'll be able to craft.\n-LBX Cooking Stove."
+LBX_CoopSchematic,Items,Gun,,,"LBX Coop Schematic"
+LBX_CoopSchematicDesc,Items,Gun,,,"When you read this you'll be able to craft.\n-LBX Coop."
+LBX_BeehiveBoxSchematic,Items,Gun,,,"LBX Beehive Box Schematic"
+LBX_BeehiveBoxSchematicDesc,Items,Gun,,,"When you read this you'll be able to craft.\n-LBX Beehive Box."
+LBXMelterSchematic,Items,Gun,,,"LBX Melter Schematic"
+LBXMelterSchematicDesc,Items,Gun,,,"When you read this you'll be able to craft.\n-LBX Melter."
+LBXOreSeedsSchematic,Items,Gun,,,"LBX Ore Seeds Schematic"
+LBXOreSeedsSchematicDesc,Items,Gun,,,"When you read this you'll be able to craft.\n-LBX Ore Seeds."
+DescXPBoost,progression,perk,,,You Would Want to lvl up Quick.\nso Kill Those Zombies.,,
+DescLuckIncense,progression,perk,,,The Incense of luck follows you.\nUse that to mine some rare ores.,,
+DescLuckIncenseRank1,progression,perk,,,gives you 7 scrap iron when mining stone.,,
+DescLuckIncenseRank2,progression,perk,,,gives you 14 scrap iron when mining stone\nand a 1% chance for silver.,,
+DescLuckIncenseRank3,progression,perk,,,gives you 21 scrap iron when mining stone\nand a 2% chance for silver\nand a 1% chance for gold.,,
+DescLuckIncenseRank4,progression,perk,,,gives you 28 scrap iron when mining stone\nand a 3% chance for silver\nand a 2% chance for gold\nand a 1% chance for diamond.,,
+DescLuckIncenseRank5,progression,perk,,,gives you 35 scrap iron when mining stone\nand a 4% chance for silver\nand a 3% chance for gold\nand a 2% chance for diamond.,,
+DescLuckIncenseRank6,progression,perk,,,gives you 42 scrap iron when mining stone\nand a 5% chance for silver\nand a 4% chance for gold\nand a 3% chance for diamond.,,
+DescLuckIncenseRank7,progression,perk,,,gives you 49 scrap iron when mining stone\nand a 6% chance for silver\nand a 5% chance for gold\nand a 4% chance for diamond.,,
+LBXPotatoSeeds,blocks,Block,,,LBX Potato Seed,,
+LBXPotatoSeedsDesc,blocks,Block,,,"An LBX Potato Seed That can grow into a Crop, A Crop that Can Be harvested To Get Potatoes, And When Destroyed It'll Drop its Seed, Please Have a Green Thumb and Plant it.\nCrafted from Nowhere.",,
+LBXPotatoPlant,blocks,Block,,,LBX Potato Crops,,
+Prestige1Token,Items,Resource,,,"[9f0000]Prestige 1 Token"
+Prestige1TokenDesc,Items,Resource,,,"a coin that can only be found after entering Prestige 1 which is LV 100.\n-You Can use these coins as an exchange for:\n-Higher Tier Missions, Items, and Higher Prestige Tokens.\n-Can only Exchanged on FNFToolTable."
+BookVending,blocks,Container,,,Quest Machine,,
+BookVendingDesc,blocks,Container,,,Buy goods at vending machines with DUKES and wait for Restock for more.,,
+HitNotes1,items,Item,,,Hit Notes 1
+HitNotes1Desc,items,Item,,,"BL4KJ4K Has Sent 10 Zombies After you! Go And Hunt the 10 zombies."
+quest_zombieHunting_name,quests,Quest,,,Zombie Hunting 1
+quest_zombieHunting_subtitle,quests,Quest,,,Zombie Hunting 1
+quest_zombieHunting_desc,quests,Quest,,,"Kill 10 zombies."
+quest_zombieHunting_offer,quests,Quest,,,"Kill 10 zombies."
+Prestige1Notes1,items,Item,,,Prestige Notes 1
+Prestige1Notes1Desc,items,Item,,,"BL4KJ4K:So... You think your special eh? Go And Kill 6 Strong Zombies! ."
+quest_zombieHuntingP1_name,quests,Quest,,,Z.Hunting Prestige 1
+quest_zombieHuntingP1_subtitle,quests,Quest,,,Z.Hunting Prestige 1
+quest_zombieHuntingP1_desc,quests,Quest,,,"Kill 6 Hard zombies."
+quest_zombieHuntingP1_offer,quests,Quest,,,"Kill 6 Hard zombies."
+LBXWheatSeeds,blocks,Block,,,LBX Wheat Seed,,
+LBXWheatSeedsDesc,blocks,Block,,,"An LBX Wheat Seed That can grow into a Crop, A Crop that Can Be harvested To Get Grown Wheat, And When Destroyed It'll Drop its Seed, Please Have a Green Thumb and Plant it.\nCrafted With Some Other Materials",,
+LBXWheatsfull,blocks,Block,,,LBX Wheat Crops,,
+LBXWheats,items,Item,,,LBX Wheat,,
+LBXWheatsDesc,items,Item,,,Wheats That Can Be Processed into a Loaf Of Bread only on LBX Stove.,,
+foodLBXLoafBread,items,Food,,,LBX Loaf Of Bread,,
+foodLBXLoafBreadDesc,items,Food,,,A Big Loaf Of Bread Processed From Wheat.\ngive you some food health and Stamina.\nIt Might Be Best if you Slice the Loaf of Bread into Slices and only crafted from the LBX Stove.\nFood +15.\nHP +5.\nStamina +7.,,
+foodLBXSlicedBread,items,Food,,,LBX Slice Of Bread,,
+foodLBXSlicedBreadDesc,items,Food,,,A Slice Of Bread From A Loaf Of Bread and only crafted from the LBX Stove.\ngive you some food health and Stamina.\nIts A Sliced Bread.\nFood +10.\nHP +3.\nStamina +5.,,
+foodLBXStuffedPotatoBread,items,Food,,,LBX Stuffed Potato Bread,,
+foodLBXStuffedPotatoBreadDesc,items,Food,,,A Hearty Meal With Stuffed Potatoes and Bread and only crafted from the LBX Stove.\ngive you some food health and Stamina.\nIt is a Hearty Meal.\nFood +20.\nHP +8.\nStamina +10.,,
+Prestige2Token,Items,Resource,,,"[9602B5]Prestige 2 Token"
+Prestige2TokenDesc,Items,Resource,,,"a coin that can only be found after entering Prestige 2 which is LV 200.\n-You Can use these coins as an exchange for:\n-Higher Tier Missions, Items, and Higher Prestige Tokens.\n-Can only Exchanged on FNFToolTable."
+LBXRubySeeds,blocks,Block,,,Rubyrite Seed,,
+LBXRubySeedsDesc,blocks,Block,,,"A Rubyrite Seed That can grow into a Tree, A Tree Can Be Chopped To Get Rubyrite to be used in future development, And When Destroyed It'll Drop its Seed, Please Have a Green Thumb and Plant it.\nCrafted from the LBX Melter with an Oak Seed and Some Rubyrite.",,
+resourceLBXRubyriteGem,Items,Resource,,,"Rubyrite"
+resourceLBXRubyriteGemDesc,Items,Resource,,,"A Special Kind Of Ore that can be used in future development.\nAs Well as Being Used To create New Otherworldly Items.\n-Can Be Crafted on FNFToolTable and LBX Melter."
+LBXRubyTrees,blocks,Block,,,Rubyrite Tree,,
+resourceLBXSapphiriteGem,Items,Resource,,,"Sapphirite"
+resourceLBXSapphiriteGemDesc,Items,Resource,,,"A Special Kind Of Ore that can be used in future development.\nAs Well as Being Used To create New Otherworldly Items.\n-Can Be Crafted on FNFToolTable and LBX Melter."
+LBXSapphireSeeds,blocks,Block,,,Sapphirite Seed,,
+LBXSapphireSeedsDesc,blocks,Block,,,"A Sapphirite Seed That can grow into a Tree, A Tree Can Be Chopped To Get Sapphirite to be used in future development, And When Destroyed It'll Drop its Seed, Please Have a Green Thumb and Plant it.\nCrafted from the LBX Melter with an Oak Seed and Some Sapphirite.",,
+LBXSappireTrees,blocks,Block,,,Sapphirite Tree,,
+quest_zombieHuntingPrest2_name,quests,Quest,,,Z.Hunting Prestige 2
+quest_zombieHuntingPrest2_subtitle,quests,Quest,,,Z.Hunting Prestige 2
+quest_zombieHuntingPrest2_desc,quests,Quest,,,"Kill 7 Hard zombies."
+quest_zombieHuntingPrest2_offer,quests,Quest,,,"Kill 7 Hard zombies."
+Prestige2Notes1,items,Item,,,Prestige 2 Notes 1
+Prestige2Notes1Desc,items,Item,,,"So... You Think 7 Is your Lucky Number? Go And Kill 7 Strong Zombies. I hope you love Chaos! ."
+SapphirearmorMilitaryVest,items,Clothes,,,Sapphire Vest,,
+SapphirearmorMilitaryVestDesc,items,Clothes,,,Sapphire armor is Unlocked on EX Crafting Skill. Its Slightly Better than the Original Version. Can Be Crafted on the LBX Melter by using up some Sapphirite for some of this Armor.,,
+LBXDragonikAKBase,Items,Gun,,,"Dragonik Base AK"
+LBXDragonikAKBaseDesc,Items,Gun,,,"A Collaborative Event Gun Can Be Crafted From the FNFToolTable and can be repaired with FNFFixITKit.\n From Lord Blue X."
+CraftingBowsBasic1,items,Item,,,Hand Craft Bows 1
+CraftingBowsBasic1Desc,items,Item,,,"Time To Get a Bow."
+quest_BC1_name,quests,Quest,,,Basik Bow Crafting
+quest_BC1_subtitle,quests,Quest,,,Basik Bow Crafting
+quest_BC1_desc,quests,Quest,,,"Craft a Primitive Bow."
+quest_BC1_offer,quests,Quest,,,"Craft a Primitive Bow."
+RubyritearmorMilitaryVest,items,Clothes,,,Rubyrite Vest,,
+RubyritearmorMilitaryVestDesc,items,Clothes,,,Rubyrite armor is Unlocked on EX Crafting Skill. Its Slightly Better than the Sapphire Version. Can Be Crafted on the LBX Melter by using up some Rubyrite for some of this Armor.,,
+Prestige3Token,Items,Resource,,,"[D0D0D0]Prestige 3 Token"
+Prestige3TokenDesc,Items,Resource,,,"a coin that can only be found after entering Prestige 3 which is LV 300.\n-You Can use these coins as an exchange for:\n-Higher Tier Missions, Items, and Higher Prestige Tokens.\n-Can only Exchanged on FNFToolTable."
+resourceLBXEmeraldriteGem,Items,Resource,,,"Emeraldrite"
+resourceLBXEmeraldriteGemDesc,Items,Resource,,,"A Special Kind Of Ore that can be used in future development.\nAs Well as Being Used To create New Otherworldly Items.\n-Can Be Crafted on FNFToolTable and LBX Melter."
+LBXEmeraldzSeeds,blocks,Block,,,Emeraldrite Seed,,
+LBXEmeraldzSeedsDesc,blocks,Block,,,"A Emeraldrite Seed That can grow into a Tree, A Tree Can Be Chopped To Get Emeraldrite to be used in future development, And When Destroyed It'll Drop its Seed, Please Have a Green Thumb and Plant it.\nCrafted from the LBX Melter with an Oak Seed and Some Emeraldrite.",,
+LBXEmeraldzTrees,blocks,Block,,,Emeraldrite Tree,,
+LBXBatmnSMG,Items,Gun,,,"LBXBatmnSMG"
+LBXBatmnSMGDesc,Items,Gun,,,"A Gun From FNFToolTable in its Normal Tier.\n-Can Be Crafted Only From FNFToolTable.\n-This Gun Can only Be Repaired With FNFFixITKit.\n-At this time there currently is No Upgrades on this version other than Vanilla Tiers."
+LBXNeoSaber,Items,Melee,,,"LBX Neo Saber"
+LBXNeoSaberDesc,Items,Melee,,,"A Knife Created As a Reference to a Legendary Hero.\n-Can Only Be Obtained From\n-FNFToolTable\n-This Is a Basic Tier , Will Make Upgrades in a Future Update."
+meleeWpnBristonsBCLWS,items,Melee,,,Briston's Knuckle Claws,,
+meleeWpnBristonsBCLWSDesc,items,Melee,,,Briston's Knuckle Claws to protect your hands and put some weight into those swings.\n\nRepair with FNFFixITKit.\nScrap to Leather although i wouldn't reccommend it.,,
+EmeraldritearmorMilitaryVest,items,Clothes,,,Emeraldrite Vest,,
+EmeraldritearmorMilitaryVestDesc,items,Clothes,,,Emeraldrite armor is Unlocked on EX Crafting Skill. Its Slightly Better than the Rubyrite Version. Can Be Crafted on the LBX Melter by using up some Emeraldrite for some of this Armor.,,
+HitNotes2,items,Item,,,Hit Notes 2
+HitNotes2Desc,items,Item,,,"BL4KJ4K Has Sent 20 Zombies After you! Go And Hunt the 20 zombies."
+quest_zombieHuntingV2_name,quests,Quest,,,Zombie Hunting 2
+quest_zombieHuntingV2_subtitle,quests,Quest,,,Zombie Hunting 2
+quest_zombieHuntingV2_desc,quests,Quest,,,"Kill 20 zombies."
+quest_zombieHuntingV2_offer,quests,Quest,,,"Kill 20 zombies."
+HitNotes3,items,Item,,,Hit Notes 3
+HitNotes3Desc,items,Item,,,"BL4KJ4K Has Sent 25 Zombies After you! Go And Hunt the 25 zombies."
+quest_zombieHuntingV3_name,quests,Quest,,,Zombie Hunting 3
+quest_zombieHuntingV3_subtitle,quests,Quest,,,Zombie Hunting 3
+quest_zombieHuntingV3_desc,quests,Quest,,,"Kill 25 zombies."
+quest_zombieHuntingV3_offer,quests,Quest,,,"Kill 25 zombies."
+HitNotes4,items,Item,,,Hit Notes 4
+HitNotes4Desc,items,Item,,,"BL4KJ4K Has Sent 50 Zombies After you! Go And Hunt the 50 zombies."
+quest_zombieHuntingV4_name,quests,Quest,,,Zombie Hunting 4
+quest_zombieHuntingV4_subtitle,quests,Quest,,,Zombie Hunting 4
+quest_zombieHuntingV4_desc,quests,Quest,,,"Kill 50 zombies."
+quest_zombieHuntingV4_offer,quests,Quest,,,"Kill 50 zombies."
+Prestige1Notes2,items,Item,,,Prestige Notes 2
+Prestige1Notes2Desc,items,Item,,,"BL4KJ4K:So... You think your special eh? Go And Kill 7 Strong Zombies! ."
+quest_zombieHuntingP1V2_name,quests,Quest,,,Z.Hunting Prestige 1V2
+quest_zombieHuntingP1V2_subtitle,quests,Quest,,,Z.Hunting Prestige 1V2
+quest_zombieHuntingP1V2_desc,quests,Quest,,,"Kill 7 Hard zombies."
+quest_zombieHuntingP1V2_offer,quests,Quest,,,"Kill 7 Hard zombies."
+Prestige1Notes3,items,Item,,,Prestige Notes 3
+Prestige1Notes3Desc,items,Item,,,"BL4KJ4K:So... I Set Off A Bomb and I called a Bomb Squad Good Luck! ."
+quest_zombieHuntingP1V3_name,quests,Quest,,,Z.Hunting Prestige 1V3
+quest_zombieHuntingP1V3_subtitle,quests,Quest,,,Z.Hunting Prestige 1V3
+quest_zombieHuntingP1V3_desc,quests,Quest,,,"Kill 8 Hard zombies."
+quest_zombieHuntingP1V3_offer,quests,Quest,,,"Kill 8 Hard zombies."
+quest_zombieHuntingPrest2V2_name,quests,Quest,,,Z.Hunting Prestige 2V2
+quest_zombieHuntingPrest2V2_subtitle,quests,Quest,,,Z.Hunting Prestige 2V2
+quest_zombieHuntingPrest2V2_desc,quests,Quest,,,"Kill 11 Hard zombies."
+quest_zombieHuntingPrest2V2_offer,quests,Quest,,,"Kill 11 Hard zombies."
+Prestige2Notes2,items,Item,,,Prestige 2 Notes 2
+Prestige2Notes2Desc,items,Item,,,"Go and Kill 11 Zombies and this wont be a Pleasant Time! ."
+quest_zombieHuntingPrest2V3_name,quests,Quest,,,Z.Hunting Prestige 2V3
+quest_zombieHuntingPrest2V3_subtitle,quests,Quest,,,Z.Hunting Prestige 2V3
+quest_zombieHuntingPrest2V3_desc,quests,Quest,,,"Kill 10 Hard zombies."
+quest_zombieHuntingPrest2V3_offer,quests,Quest,,,"Kill 10 Hard zombies."
+Prestige2Notes3,items,Item,,,Prestige 2 Notes 3
+Prestige2Notes3Desc,items,Item,,,"Its an all out WAR! ."
+quest_zombieHuntingPrest3V1_name,quests,Quest,,,Z.Hunting Prestige 3
+quest_zombieHuntingPrest3V1_subtitle,quests,Quest,,,Z.Hunting Prestige 3
+quest_zombieHuntingPrest3V1_desc,quests,Quest,,,"Kill 3 Animals."
+quest_zombieHuntingPrest3V1_offer,quests,Quest,,,"Kill 3 Animals."
+Prestige3Notes1,items,Item,,,Prestige 3 Notes 1
+Prestige3Notes1Desc,items,Item,,,"Its Time To Meet The Wildlife! ."
+quest_zombieHuntingPrest3V2_name,quests,Quest,,,Z.Hunting Prestige 3V2
+quest_zombieHuntingPrest3V2_subtitle,quests,Quest,,,Z.Hunting Prestige 3V2
+quest_zombieHuntingPrest3V2_desc,quests,Quest,,,"Kill 4 Animals."
+quest_zombieHuntingPrest3V2_offer,quests,Quest,,,"Kill 4 Animals."
+Prestige3Notes2,items,Item,,,Prestige 3 Notes 2
+Prestige3Notes2Desc,items,Item,,,"Its Time to See Whos The Alpha! ."
+quest_zombieHuntingPrest3V3_name,quests,Quest,,,Z.Hunting Prestige 3V3
+quest_zombieHuntingPrest3V3_subtitle,quests,Quest,,,Z.Hunting Prestige 3V3
+quest_zombieHuntingPrest3V3_desc,quests,Quest,,,"Kill 6 Zombies."
+quest_zombieHuntingPrest3V3_offer,quests,Quest,,,"Kill 6 Zombies."
+Prestige3Notes3,items,Item,,,Prestige 3 Notes 3
+Prestige3Notes3Desc,items,Item,,,"Its Time to Meet The Titans! ."
+VigilanteVehiclePlaceable,vehicles,item,,,Classic Batmobile,,
+vehiclePlaceableGroupDesc,vehicles,item,,,This vehicle can be placed into the world like a block using the secondary action.\n\nRequires a workbench to craft.,,
+vehicleBATChasis,vehicles,item,,,Batmobile Chassis,,
+vehicleBATChasisDesc,vehicles,item,,,A Unique type of Chasis for a Batmobile.,,
+vehicleBATAccessories,vehicles,item,,,Batmobile Accessories,,
+vehicleBATAccessoriesDesc,vehicles,item,,,A Unique type of Accessories for a Batmobile.,,
+BatEngine,items,Part,,,Bat Engine,,
+BatEngineDesc,items,Part,,,A Unique Engine for a certain vehicle.,,
+ToyotaCelicasPlaceable,vehicles,item,,,LBX Toyota Celica 02,,
+vehiclePlaceableGroupDesc,vehicles,item,,,This vehicle can be placed into the world like a block using the secondary action.\n\nRequires a workbench to craft.,,
+ExCraftingTip_title,Journal Tip,,,,EX Crafting Skill,,
+ExCraftingTip,Journal Tip,,,,"This Is a Spread Sheet on how the Current EX Crafting Skill Is Currently At.\nEX Reading Books to Increase the EX Crafting Skill.\n\nDragonikAK T2-4 , T3-9 , T4-24 , T5-39 , T6-46.\nBatmanSMG T2-5 , T3-10 , T4-25 , T5-40 , T6-47.\nNeoSaber T2-6 , T3-11 , T4-26 , T5-41 , T6-48.\nBristonsBearClaws T2-7 . T3-12 , T4-27 , T5-42 , T6-50.\nSapphire Military Vest T2-52 , T3-57 , T4-63 , T5-71 , T6-77.\nRuby Military Vest T2-53 , T3-59 , T4-65 , T5-73 , T6-79.\nEmerald Military Vest T2-55 , T3-61 , T4-67 , T5-75 , T6-80.",,

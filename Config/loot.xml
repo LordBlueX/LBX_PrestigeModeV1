@@ -1,0 +1,83 @@
+<configs>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg01']">
+		<item name="COINZ" count="20,30" prob="1"/>									<!--A21 is 20,30 Was 10,15 for A20-->
+		<item name="FNFScrapMetalParts" count="20,40" prob="1"/>					<!--A21 is 20,40 Was 10,20 for A20  -->  
+		<item name="DraconicBones" count="1,2" prob="0.80"/>							<!-- A21 added "1,2" , reduced Probability rate -->
+		<item name="EXSkillMagazine" count="1" prob="1"/>								<!-- A21 Readded  -->
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg02']">
+		<item name="COINZ" count="20,30" prob="1"/>
+		<item name="FNFScrapMetalParts" count="20,40" prob="1"/>
+		<item name="DraconicBones" count="1,2" prob="0.80"/>
+		<item name="EXSkillMagazine" count="1" prob="1"/>
+	</append>
+
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg03']">
+		<item name="COINZ" count="20,30" prob="1"/>
+		<item name="FNFScrapMetalParts" count="20,40" prob="1"/>
+		<item name="DraconicBones" count="1,2" prob="0.80"/>
+		<item name="EXSkillMagazine" count="1" prob="1"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong01']">
+		<item name="COINZ" count="40,55" prob="1"/>									<!-- A21 is 40,55 Was 20,30 for A20 -->
+		<item name="FNFScrapMetalParts" count="40,65" prob="1"/>					<!-- A21 is 40,65 Was 20,35 for A20 -->
+		<item name="DraconicBones" count="2,3" prob="0.85"/>						<!-- A21 added "2,3" , reduced Probability rate -->
+		<item name="EXSkillMagazine" count="1" prob="1"/>							<!-- A21 Readded  -->
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong02']">
+		<item name="COINZ" count="40,55" prob="1"/>
+		<item name="FNFScrapMetalParts" count="40,65" prob="1"/>
+		<item name="DraconicBones" count="2,3" prob="0.85"/>
+		<item name="EXSkillMagazine" count="1" prob="1"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong03']">
+		<item name="COINZ" count="40,55" prob="1"/>
+		<item name="FNFScrapMetalParts" count="40,65" prob="1"/>
+		<item name="DraconicBones" count="2,3" prob="0.85"/>
+		<item name="EXSkillMagazine" count="1" prob="1"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss01']">
+		<item name="COINZ" count="60,80" prob="1"/>									<!--  A21 is 60,80 Was 35,50 for A20 -->
+		<item name="FNFScrapMetalParts" count="60,87" prob="1"/>					<!--  A21 is 60,87 Was 35,55 for A20 -->
+		<item name="DraconicBones" count="3,5" prob="0.90"/>							<!-- A21 added "3,5" , reduced Probability rate -->
+		<item name="EXSkillMagazine" count="1" prob="1"/>								<!-- A21 Readded  -->
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss02']">
+		<item name="COINZ" count="60,80" prob="1"/>		
+		<item name="FNFScrapMetalParts" count="60,87" prob="1"/>
+		<item name="DraconicBones" count="3,5" prob="0.90"/>
+		<item name="EXSkillMagazine" count="1" prob="1"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss03']">
+		<item name="COINZ" count="60,80" prob="1"/>		
+		<item name="FNFScrapMetalParts" count="60,87" prob="1"/>
+		<item name="DraconicBones" count="3,5" prob="0.90"/>
+		<item name="EXSkillMagazine" count="1" prob="1"/>
+	</append>
+
+	<append xpath="/lootcontainers" >
+		<lootcontainer name="chickenbin" id="194" size="2,1" count="4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" destroy_on_close="true" loot_quality_template="qualPlus1Template">	<!-- Count is on 4 was 2 -->
+			<item name="foodEgg" count="3,5" prob="1"/>
+			<item name="resourceFeather" count="2,4" prob="1"/>
+		</lootcontainer>
+	</append>
+
+	<append xpath="/lootcontainers" >
+		<lootcontainer name="beehivebox" id="193" size="3,1" count="3" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" destroy_on_close="true" loot_quality_template="qualPlus1Template">
+			<item name="foodHoney" count="2,3" prob="1"/>
+			<item name="foodHoneyOoze" count="1,4" prob="1"/>
+			<item name="foodHoneyCombs" count="1,3" prob="1"/>
+		</lootcontainer>
+	</append>
+
+
+</configs>

@@ -1,0 +1,309 @@
+<configs>
+
+<!-- Zombie Hunting  -->
+<append xpath="/quests">
+<quest id="quest_zombieHunting">
+	<property name="name_key" value="quest_zombieHunting_name"/>
+	<property name="subtitle_key" value="quest_zombieHunting_subtitle"/>
+	<property name="description_key" value="quest_zombieHunting_desc"/>
+	<property name="offer_key" value="quest_zombieHunting_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill">
+	<property name="needed_count" value="10" param1="zombies_needed"/>
+	<property name="target_tags" value="zombie"/>
+	</objective>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="casinoCoin" value="700"/>
+</quest>
+
+<quest id="quest_zombieHuntingP1">
+	<property name="name_key" value="quest_zombieHuntingP1_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingP1_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingP1_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingP1_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="zombieFatCop" value="2"/>
+	<objective type="EntityKill" id="zombieFatHawaiian" value="2"/>
+	<objective type="EntityKill" id="animalZombieDog" value="1"/>
+	<objective type="EntityKill" id="zombieBoe" value="1"/>
+
+		<action type="SpawnEnemy" id="zombieFatCop" value="2"/>
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2"/>
+		<action type="SpawnEnemy" id="animalZombieDog" value="1"/>
+		<action type="SpawnEnemy" id="zombieBoe" value="1"/>
+
+	<reward type="Exp" value="5000"/>
+	<reward type="Item" id="casinoCoin" value="2000"/>
+	<reward type="Item" id="Prestige1Token" value="15"/>
+</quest>
+
+<quest id="quest_zombieHuntingPrest2">
+	<property name="name_key" value="quest_zombieHuntingPrest2_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingPrest2_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingPrest2_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingPrest2_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="zombieFatCop" value="3"/>
+	<objective type="EntityKill" id="zombieFatHawaiian" value="3"/>
+	<objective type="EntityKill" id="zombieScreamer" value="1"/>
+
+		<action type="SpawnEnemy" id="zombieFatCop" value="3"/>
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="3"/>
+		<action type="SpawnEnemy" id="zombieScreamer" value="1"/>
+
+	<reward type="Exp" value="7000"/>
+	<reward type="Item" id="casinoCoin" value="2500"/>
+	<reward type="Item" id="Prestige2Token" value="15"/>
+</quest>
+
+<quest id="quest_BC1">
+	<property name="name_key" value="quest_BC1_name"/>
+	<property name="subtitle_key" value="quest_BC1_subtitle"/>
+	<property name="description_key" value="quest_BC1_desc"/>
+	<property name="offer_key" value="quest_BC1_offer"/>
+	<property name="icon" value="ui_game_symbol_archery"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="veryeasy"/>
+	<property name="shareable" value="false"/>
+
+	<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+	<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
+	<objective type="Craft" id="gunBowT0PrimitiveBow" value="1" phase="2"/>
+
+	<reward type="Exp" value="100"/>
+	<reward type="Item" id="ammoArrowStone" value="25"/>
+</quest>
+
+<quest id="quest_zombieHuntingV2">
+	<property name="name_key" value="quest_zombieHuntingV2_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingV2_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingV2_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingV2_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill">
+	<property name="needed_count" value="20" param1="zombies_needed"/>
+	<property name="target_tags" value="zombie"/>
+	</objective>
+		
+	<reward type="Exp" value="1500"/>
+	<reward type="Item" id="casinoCoin" value="750"/>
+</quest>
+
+<quest id="quest_zombieHuntingV3">
+	<property name="name_key" value="quest_zombieHuntingV3_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingV3_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingV3_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingV3_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill">
+	<property name="needed_count" value="25" param1="zombies_needed"/>
+	<property name="target_tags" value="zombie"/>
+	</objective>
+		
+	<reward type="Exp" value="2000"/>
+	<reward type="Item" id="casinoCoin" value="800"/>
+</quest>
+
+<quest id="quest_zombieHuntingV4">
+	<property name="name_key" value="quest_zombieHuntingV4_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingV4_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingV4_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingV4_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill">
+	<property name="needed_count" value="50" param1="zombies_needed"/>
+	<property name="target_tags" value="zombie"/>
+	</objective>
+		
+	<reward type="Exp" value="4000"/>
+	<reward type="Item" id="casinoCoin" value="1600"/>
+</quest>
+
+<quest id="quest_zombieHuntingP1V2">
+	<property name="name_key" value="quest_zombieHuntingP1V2_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingP1V2_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingP1V2_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingP1V2_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="zombieFatCop" value="2"/>
+	<objective type="EntityKill" id="zombieFatHawaiian" value="2"/>
+	<objective type="EntityKill" id="zombieSoldier" value="1"/>
+	<objective type="EntityKill" id="zombieBoe" value="2"/>
+
+		<action type="SpawnEnemy" id="zombieFatCop" value="2"/>
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2"/>
+		<action type="SpawnEnemy" id="zombieSoldier" value="1"/>
+		<action type="SpawnEnemy" id="zombieBoe" value="2"/>
+
+	<reward type="Exp" value="5500"/>
+	<reward type="Item" id="casinoCoin" value="2500"/>
+	<reward type="Item" id="Prestige1Token" value="20"/>
+</quest>
+
+<quest id="quest_zombieHuntingP1V3">
+	<property name="name_key" value="quest_zombieHuntingP1V3_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingP1V3_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingP1V3_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingP1V3_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="zombieFatCop" value="5"/>
+	<objective type="EntityKill" id="zombieSoldier" value="3"/>
+
+		<action type="SpawnEnemy" id="zombieFatCop" value="5"/>
+		<action type="SpawnEnemy" id="zombieSoldier" value="3"/>
+
+	<reward type="Exp" value="7500"/>
+	<reward type="Item" id="casinoCoin" value="3500"/>
+	<reward type="Item" id="Prestige1Token" value="30"/>
+</quest>
+
+<quest id="quest_zombieHuntingPrest2V2">
+	<property name="name_key" value="quest_zombieHuntingPrest2V2_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingPrest2V2_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingPrest2V2_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingPrest2V2_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="zombieFatCop" value="6"/>
+	<objective type="EntityKill" id="zombieFatHawaiian" value="2"/>
+	<objective type="EntityKill" id="zombieScreamer" value="3"/>
+
+		<action type="SpawnEnemy" id="zombieFatCop" value="6"/>
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2"/>
+		<action type="SpawnEnemy" id="zombieScreamer" value="3"/>
+
+	<reward type="Exp" value="8000"/>
+	<reward type="Item" id="casinoCoin" value="3000"/>
+	<reward type="Item" id="Prestige2Token" value="30"/>
+</quest>
+
+<quest id="quest_zombieHuntingPrest2V3">
+	<property name="name_key" value="quest_zombieHuntingPrest2V3_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingPrest2V3_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingPrest2V3_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingPrest2V3_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="zombieSoldier" value="10"/>
+
+		<action type="SpawnEnemy" id="zombieSoldier" value="10"/>
+
+	<reward type="Exp" value="8500"/>
+	<reward type="Item" id="casinoCoin" value="4000"/>
+	<reward type="Item" id="Prestige2Token" value="40"/>
+</quest>
+
+<quest id="quest_zombieHuntingPrest3V1">
+	<property name="name_key" value="quest_zombieHuntingPrest3V1_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingPrest3V1_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingPrest3V1_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingPrest3V1_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="animalBear" value="3"/>
+
+		<action type="SpawnEnemy" id="animalBear" value="3"/>
+
+	<reward type="Exp" value="8500"/>
+	<reward type="Item" id="casinoCoin" value="4000"/>
+	<reward type="Item" id="Prestige3Token" value="40"/>
+</quest>
+
+<quest id="quest_zombieHuntingPrest3V2">
+	<property name="name_key" value="quest_zombieHuntingPrest3V2_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingPrest3V2_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingPrest3V2_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingPrest3V2_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="animalDireWolf" value="4"/>
+
+		<action type="SpawnEnemy" id="animalDireWolf" value="4"/>
+
+	<reward type="Exp" value="8900"/>
+	<reward type="Item" id="casinoCoin" value="4500"/>
+	<reward type="Item" id="Prestige3Token" value="50"/>
+</quest>
+
+<quest id="quest_zombieHuntingPrest3V3">
+	<property name="name_key" value="quest_zombieHuntingPrest3V3_name"/>
+	<property name="subtitle_key" value="quest_zombieHuntingPrest3V3_subtitle"/>
+	<property name="description_key" value="quest_zombieHuntingPrest3V3_desc"/>
+	<property name="offer_key" value="quest_zombieHuntingPrest3V3_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" id="zombieDemolition" value="6"/>
+
+		<action type="SpawnEnemy" id="zombieDemolition" value="6"/>
+
+	<reward type="Exp" value="666"/>
+	<reward type="Item" id="casinoCoin" value="666"/>
+	<reward type="Item" id="Prestige3Token" value="66"/>
+</quest>
+
+</append>
+
+
+</configs>

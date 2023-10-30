@@ -1,0 +1,15 @@
+<Configs>
+
+<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+		<item_property_overrides name="LBXDragonikAKBase">
+			<property name="ScopeCameraOffset" value="0.0008,-.007,.1"/> <!-- Left/Right, Down/Up, Back/Front 0.0008 Fixed it --> 
+		</item_property_overrides>
+</append>
+
+<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+		<item_property_overrides name="LBXBatmnSMG">
+			<property name="ScopeCameraOffset" value="0.0005,-.018,-.2"/> <!-- Left/Right, Down/Up was -.019, Back/Front 3rd part was .1 --> 
+		</item_property_overrides>
+</append>
+
+</Configs>

@@ -1,0 +1,447 @@
+<configs>
+
+<append xpath="/recipes">
+
+
+	
+<recipe name="FNFToolTable" count="1" craft_time="30" craft_area="workbench" tags="learnable,workbenchCrafting">
+	<ingredient name="resourceForgedIron" count="25"/>
+	<ingredient name="resourceMechanicalParts" count="20"/>
+	<ingredient name="meleeToolSalvageT1Wrench" count="1"/>
+	<ingredient name="meleeToolRepairT1ClawHammer" count="1"/>
+	<ingredient name="resourceWood" count="50"/>
+</recipe>
+
+
+<recipe name="FNFFixITKit" count="1" craft_time="30" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="FNFScrapMetalParts" count="200" />
+</recipe>
+
+
+<recipe name="FNFScrapMetalParts" count="50" craft_time="10" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="500" />
+</recipe>
+
+<recipe name="FNFScrapMetalParts" count="100" craft_time="25" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="1000" />
+</recipe>
+
+<recipe name="LBXCanteenCLEANWATER" craft_time="15" count="1">
+	<ingredient name="drinkJarBoiledWater" count="2"/>
+</recipe>
+
+<recipe name="LBXCanteenEmpty" count="1" craft_area="campfire" craft_time="15">
+	<ingredient name="resourceBrokenGlass" count="10"/>
+</recipe>
+
+<recipe name="LBXCanteenCLEANWATER" count="1" craft_area="campfire" craft_time="15">
+	<ingredient name="LBXCanteenMURKY" count="1"/>
+</recipe>
+
+<recipe name="drinkJarBoiledWater" count="2" craft_area="campfire" craft_time="30">
+	<ingredient name="LBXCanteenCLEANWATER" count="1"/>
+</recipe>
+
+<recipe name="LBX_Coop"	count="1" craft_area="FNFToolTable" craft_time="10" tags="learnable,workbenchCrafting">
+	<ingredient name="COINZ" count="300" />
+</recipe>
+
+<recipe name="LBX_BeehiveBox" count="1" craft_area="FNFToolTable" craft_time="10" tags="learnable,workbenchCrafting">
+	<ingredient name="COINZ" count="300" />
+</recipe>
+
+<recipe name="LBXMelter" count="1" craft_time="30" craft_area="FNFToolTable" tags="learnable,workbenchCrafting">
+		<ingredient name="COINZ" count="1500" />
+</recipe>
+
+<recipe name="resourceLBXBronzeIngot" count="1" craft_time="10" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXOre" count="1000" />
+</recipe>
+
+<recipe name="resourceLBXReinforcedBronzeIngot" count="1" craft_time="10" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXBronzeIngot" count="5" />
+</recipe>
+
+<recipe name="LBXBronzeShapes" count="1" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXBronzeIngot" count="5" />
+</recipe>
+
+<recipe name="LBXRefinedBronzeShapes" count="1" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXReinforcedBronzeIngot" count="5" />
+</recipe>
+
+
+<recipe name="LBXCookingStoves" count="1" craft_time="20" craft_area="FNFToolTable" tags="learnable,workbenchCrafting">
+		<ingredient name="COINZ" count="1000" />
+</recipe>
+
+<recipe name="foodCANNEDBaconAndEggs" count="1" craft_area="LBXCookingStoves" craft_tool="toolLBXKitchenUtil" >
+		<ingredient name="foodBaconAndEggs" count="1"/>
+		<ingredient name="LBXEmptyCans" count="1"/>
+</recipe>
+
+<recipe name="toolLBXStovePot" count="1" craft_time="20" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="200" />
+</recipe>
+
+<recipe name="toolLBXStovePan" count="1" craft_time="20" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="200" />
+</recipe>
+
+<recipe name="toolLBXKitchenUtil" count="1" craft_time="20" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="200" />
+</recipe>
+
+<recipe name="LBXEmptyCans" craft_time="15" count="1">
+	<ingredient name="resourceScrapIron" count="150"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+</recipe>
+
+
+<recipe name="foodLBXMeat" count="1" craft_time="20" craft_area="LBXCookingStoves" craft_tool="toolLBXStovePot" >
+		<ingredient name="foodRottingFlesh" count="5"/>
+</recipe>
+
+<recipe name="foodLBXBoiledMeat" count="1" craft_time="20" craft_area="LBXCookingStoves" craft_tool="toolLBXStovePot" >
+		<ingredient name="foodLBXMeat" count="2"/>
+		<ingredient name="LBXCanteenCLEANWATER" count="1"/>
+</recipe>
+
+<recipe name="foodLBXMeatandHoney" count="1" craft_time="20" craft_area="LBXCookingStoves" craft_tool="toolLBXStovePan" >
+		<ingredient name="foodLBXBoiledMeat" count="1"/>
+		<ingredient name="foodHoneyOoze" count="3"/>
+		<ingredient name="foodHoneyCombs" count="1"/>
+</recipe>
+
+<recipe name="foodLBXHoneyCloth" craft_time="10" count="1" >
+		<ingredient name="resourceCloth" count="1"/>
+		<ingredient name="foodHoneyOoze" count="3"/>
+</recipe>
+
+<recipe name="foodBoiledCANNEDBaconAndEggs" craft_time="10" count="1" craft_area="LBXCookingStoves" craft_tool="toolLBXStovePan" >
+		<ingredient name="foodCANNEDBaconAndEggs" count="1"/>
+		<ingredient name="LBXCanteenCLEANWATER" count="1"/>
+</recipe>
+
+<recipe name="DraconicBones" craft_time="5" count="1" >
+		<ingredient name="resourceBone" count="100"/>
+</recipe>
+
+<recipe name="gunDraconicDblShotty" count="1" craft_time="20" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="DraconicBones" count="200" />
+</recipe>
+
+<recipe name="meleeWpnDraconicKnuckles" count="1" craft_time="20" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="DraconicBones" count="200" />
+</recipe>
+
+<recipe name="DraconicsRepairKitz" count="1" craft_time="20" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="DraconicBones" count="150" />
+</recipe>
+
+<recipe name="resourceLBXSilverIngot" count="1" craft_time="10" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXReinforcedBronzeIngot" count="10" />
+</recipe>
+
+<recipe name="resourceLBXReinforcedSilverIngot" count="1" craft_time="10" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXSilverIngot" count="5" />
+</recipe>
+
+<recipe name="LBXSilversShapes" count="1" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXSilverIngot" count="7" />
+</recipe>
+
+<recipe name="LBXRefinedSilversShapes" count="1" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXReinforcedSilverIngot" count="7" />
+</recipe>
+
+<recipe name="LBXRepairingWrench" count="1" craft_time="20" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="500" />
+</recipe>
+
+<recipe name="BronzeFence" count="1" craft_time="15" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXBronzeIngot" count="5" />
+		<ingredient name="resourceScrapIron" count="10" />
+</recipe>
+
+<recipe name="RefBronzeFence" count="1" craft_time="15" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXReinforcedBronzeIngot" count="5" />
+		<ingredient name="resourceScrapIron" count="10" />
+</recipe>
+
+<recipe name="SilversFence" count="1" craft_time="15" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXSilverIngot" count="5" />
+		<ingredient name="resourceScrapIron" count="10" />
+</recipe>
+
+<recipe name="RefSilversFence" count="1" craft_time="15" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXReinforcedSilverIngot" count="5" />
+		<ingredient name="resourceScrapIron" count="10" />
+</recipe>
+
+<recipe name="LBXOreSeeds" count="1" craft_time="10" craft_area="FNFToolTable" tags="learnable,workbenchCrafting">
+		<ingredient name="treePlantedOak1m" count="1" />
+		<ingredient name="FNFScrapMetalParts" count="100" />
+</recipe>
+
+<recipe name="wineBarrelSetPlayerSecure" count="1" craft_time="30" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceNail" count="25"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+	<ingredient name="resourceWood" count="100"/>
+</recipe>
+
+<recipe name="cntCoffeeMakerCommercial" count="1" craft_time="30" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceBrokenGlass" count="30"/>
+	<ingredient name="drinkJarCoffee" count="1"/>
+	<ingredient name="resourceElectricParts" count="25"/>
+</recipe>
+
+<recipe name="LBXC-EmptyBeer" count="1" craft_time="15">
+	<ingredient name="LBXCanteenEmpty" count="1"/>
+</recipe>
+
+<recipe name="LBXC-EmptyCoffee" count="1" craft_time="15">
+	<ingredient name="LBXCanteenEmpty" count="1"/>
+</recipe>
+
+<recipe name="LBXC-EmptyBeer" count="1" craft_time="15">
+	<ingredient name="LBXC-EmptyCoffee" count="1"/>
+</recipe>
+
+<recipe name="LBXC-EmptyCoffee" count="1" craft_time="15">
+	<ingredient name="LBXC-EmptyBeer" count="1"/>
+</recipe>
+
+<recipe name="LBXCanteenEmpty" count="1" craft_time="15">
+	<ingredient name="LBXC-EmptyCoffee" count="1"/>
+</recipe>
+
+<recipe name="LBXCanteenEmpty" count="1" craft_time="15">
+	<ingredient name="LBXC-EmptyBeer" count="1"/>
+</recipe>
+
+<recipe name="FNFToolTableSchematic" count="1" craft_time="40">
+	<ingredient name="COINZ" count="1000"/>
+	<ingredient name="FNFScrapMetalParts" count="1000"/>
+</recipe>
+
+<recipe name="LBXOreSeedsSchematic" count="1" craft_time="15" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="1000" />
+		<ingredient name="FNFScrapMetalParts" count="1000" />
+</recipe>
+
+<recipe name="LBXMelterSchematic" count="1" craft_time="15" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="1000" />
+		<ingredient name="FNFScrapMetalParts" count="1000" />
+</recipe>
+
+<recipe name="LBX_BeehiveBoxSchematic" count="1" craft_time="15" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="1000" />
+		<ingredient name="FNFScrapMetalParts" count="1000" />
+</recipe>
+
+<recipe name="LBX_CoopSchematic" count="1" craft_time="15" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="1000" />
+		<ingredient name="FNFScrapMetalParts" count="1000" />
+</recipe>
+
+<recipe name="LBXCookingStovesSchematic" count="1" craft_time="15" craft_area="FNFToolTable" tags="workbenchCrafting">
+		<ingredient name="COINZ" count="1000" />
+		<ingredient name="FNFScrapMetalParts" count="1000" />
+</recipe>
+
+<recipe name="LBXPotatoSeeds" count="1">
+		<ingredient name="foodCropPotato" count="4"/>
+</recipe>
+
+<recipe name="Prestige1Token" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="COINZ" count="1000" />
+</recipe>
+
+<recipe name="Prestige1Notes1" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="HitNotes1" count="1" />
+	<ingredient name="Prestige1Token" count="5" />
+</recipe>
+
+<recipe name="BookVending" count="1" craft_area="FNFToolTable" craft_time="50" tags="workbenchCrafting">
+	<ingredient name="COINZ" count="5000" />
+</recipe>
+
+<recipe name="foodLBXLoafBread" count="1" craft_time="30" craft_area="LBXCookingStoves" craft_tool="toolLBXKitchenUtil" >
+		<ingredient name="LBXWheats" count="10"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="LBXWheatSeeds" count="1" craft_time="10">
+		<ingredient name="treePlantedOak1m" count="1"/>
+		<ingredient name="resourceYuccaFibers" count="10"/>
+</recipe>
+
+<recipe name="foodLBXSlicedBread" count="10" craft_time="20" craft_area="LBXCookingStoves" craft_tool="toolLBXKitchenUtil" >
+		<ingredient name="foodLBXLoafBread" count="1"/>
+</recipe>
+
+<recipe name="foodLBXStuffedPotatoBread" count="1" craft_time="25" craft_area="LBXCookingStoves" craft_tool="toolLBXKitchenUtil" >
+		<ingredient name="foodLBXSlicedBread" count="1"/>
+		<ingredient name="foodBakedPotato" count="1"/>
+</recipe>
+
+<recipe name="Prestige2Token" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="Prestige1Token" count="1000" />
+</recipe>
+
+<recipe name="LBXSapphireSeeds" count="1" craft_time="40" craft_area="LBXMelter" tags="learnable,workbenchCrafting">
+		<ingredient name="treePlantedOak1m" count="1" />
+		<ingredient name="resourceLBXOre" count="10000" />
+</recipe>
+
+<recipe name="LBXSapphireSeeds" count="1" craft_time="30" craft_area="LBXMelter" tags="learnable,workbenchCrafting">
+		<ingredient name="treePlantedOak1m" count="1" />
+		<ingredient name="resourceLBXSapphiriteGem" count="8" />
+</recipe>
+
+<recipe name="resourceLBXRubyriteGem" count="8" craft_time="30" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXSapphiriteGem" count="8000" />
+</recipe>
+
+<recipe name="LBXRubySeeds" count="1" craft_time="30" craft_area="LBXMelter" tags="learnable,workbenchCrafting">
+		<ingredient name="LBXSapphireSeeds" count="1" />
+		<ingredient name="resourceLBXRubyriteGem" count="8" />
+</recipe>
+
+<recipe name="Prestige2Notes1" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="Prestige1Notes1" count="1" />
+	<ingredient name="Prestige2Token" count="5" />
+</recipe>
+
+<recipe name="SapphirearmorMilitaryVest" count="1" craft_time="50" craft_area="LBXMelter" tags="workbenchCrafting,craftingEX">
+		<ingredient name="armorMilitaryVest" count="1" />
+		<ingredient name="resourceLBXSapphiriteGem" count="80" />
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="resourceLBXSapphiriteGem"/>
+		</effect_group>
+</recipe>
+
+<recipe name="LBXDragonikAKBase" count="1" craft_time="60" craft_area="FNFToolTable" tags="workbenchCrafting,craftingEX">  <!-- Beta Recipe -->
+	<ingredient name="COINZ" count="1000"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="COINZ"/>
+	</effect_group>
+</recipe>
+
+<recipe name="RubyritearmorMilitaryVest" count="1" craft_time="50" craft_area="LBXMelter" tags="workbenchCrafting,craftingEX">
+		<ingredient name="SapphirearmorMilitaryVest" count="1" />
+		<ingredient name="resourceLBXRubyriteGem" count="80" />
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="resourceLBXRubyriteGem"/>
+		</effect_group>
+</recipe>
+
+<recipe name="Prestige3Token" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="Prestige2Token" count="1000" />
+</recipe>
+
+<recipe name="resourceLBXEmeraldriteGem" count="8" craft_time="30" craft_area="LBXMelter" tags="workbenchCrafting">
+		<ingredient name="resourceLBXRubyriteGem" count="8000" />
+</recipe>
+
+<recipe name="LBXEmeraldzSeeds" count="1" craft_time="30" craft_area="LBXMelter" tags="learnable,workbenchCrafting">
+		<ingredient name="LBXRubySeeds" count="1" />
+		<ingredient name="resourceLBXEmeraldriteGem" count="8" />
+</recipe>
+
+<recipe name="LBXBatmnSMG" count="1" craft_time="60" craft_area="FNFToolTable" tags="workbenchCrafting,craftingEX">  <!-- Beta Recipe -->
+	<ingredient name="COINZ" count="1000"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="COINZ"/>
+	</effect_group>
+</recipe>
+
+<recipe name="LBXNeoSaber" count="1" craft_time="60" craft_area="FNFToolTable" tags="workbenchCrafting,craftingEX">  <!-- Beta Recipe -->
+	<ingredient name="COINZ" count="1000"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="COINZ"/>
+	</effect_group>
+</recipe>
+
+<recipe name="meleeWpnBristonsBCLWS" count="1" craft_time="60" craft_area="FNFToolTable" tags="workbenchCrafting,craftingEX">  <!-- Beta Recipe -->
+	<ingredient name="COINZ" count="1000"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="COINZ"/>
+	</effect_group>
+</recipe>
+
+<recipe name="EmeraldritearmorMilitaryVest" count="1" craft_time="50" craft_area="LBXMelter" tags="workbenchCrafting,craftingEX">
+		<ingredient name="RubyritearmorMilitaryVest" count="1" />
+		<ingredient name="resourceLBXEmeraldriteGem" count="80" />
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="resourceLBXEmeraldriteGem"/>
+		</effect_group>
+</recipe>
+
+<recipe name="Prestige1Notes2" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="HitNotes2" count="1" />
+	<ingredient name="Prestige1Token" count="15" />
+</recipe>
+
+<recipe name="Prestige1Notes3" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="HitNotes3" count="1" />
+	<ingredient name="Prestige1Token" count="30" />
+</recipe>
+
+<recipe name="Prestige2Notes2" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="Prestige1Notes2" count="1" />
+	<ingredient name="Prestige2Token" count="15" />
+</recipe>
+
+<recipe name="Prestige2Notes3" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="Prestige1Notes3" count="1" />
+	<ingredient name="Prestige2Token" count="30" />
+</recipe>
+
+<recipe name="Prestige3Notes1" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="Prestige2Notes1" count="1" />
+	<ingredient name="Prestige3Token" count="30" />
+</recipe>
+
+<recipe name="Prestige3Notes2" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="Prestige2Notes2" count="1" />
+	<ingredient name="Prestige3Token" count="45" />
+</recipe>
+
+<recipe name="Prestige3Notes3" count="1" craft_area="FNFToolTable" craft_time="20" tags="learnable,workbenchCrafting">
+	<ingredient name="Prestige2Notes3" count="1" />
+	<ingredient name="Prestige3Token" count="70" />
+</recipe>
+
+<recipe name="VigilanteVehiclePlaceable" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting"> <!-- Will change the craft area in My Mod Project -->
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="vehicleBATChasis" count="1"/> <!-- vehicle4x4TruckChassis x 2 , Batmobile Chasis -->
+	<ingredient name="vehicleBATAccessories" count="1"/> <!-- vehicle4x4TruckAccessories x 2 , Batmobile Accessories -->
+	<ingredient name="BatEngine" count="1"/> <!-- smallEngine x 2 , Batmobile Engine -->
+	<ingredient name="carBattery" count="2"/>
+</recipe>
+
+<recipe name="vehicleBATChasis" count="1" craft_time="50" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="vehicle4x4TruckChassis" count="2"/>
+</recipe>
+
+<recipe name="vehicleBATAccessories" count="1" craft_time="70" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="vehicle4x4TruckAccessories" count="2"/>
+</recipe>
+
+<recipe name="BatEngine" count="1" craft_time="90" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="smallEngine" count="2"/>
+</recipe>
+
+<recipe name="ToyotaCelicasPlaceable" count="1" craft_time="200" craft_area="workbench" tags="workbenchCrafting"> <!-- Will change the craft area , and recipe in My Mod Project -->
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="vehicle4x4TruckChassis" count="1"/> 
+	<ingredient name="vehicle4x4TruckAccessories" count="1"/> 
+	<ingredient name="smallEngine" count="1"/> 
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+
+</append>
+
+</configs>

@@ -1,0 +1,328 @@
+<configs>
+<set xpath="/progression/level/@max_level">2500</set> <!--increases player max lvl to 2500, vanilla is 300-->
+
+<append xpath="/progression/crafting_skills">
+
+	<crafting_skill name="craftingEX" max_level="80" parent="attCrafting" name_key="craftingEXName" desc_key="craftingEXDesc" long_desc_key="craftingEXLongDesc" icon="ui_game_symbol_EX">
+
+		<display_entry icon="LBXDragonikAKBase" name_key="EXT1-1" has_quality="true" unlock_level="1,4,5,6,7,9,10,11,12,24,25,26,27,39,40,41,42,46,47,48,49,50" >
+			<unlock_entry item="LBXDragonikAKBase,LBXBatmnSMG,LBXNeoSaber,meleeWpnBristonsBCLWS" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="SapphirearmorMilitaryVest" name_key="EXT2-1" has_quality="true" unlock_level="51,52,53,55,57,59,61,63,65,67,71,73,75,77,79,80" >
+			<unlock_entry item="SapphirearmorMilitaryVest,RubyritearmorMilitaryVest,EmeraldritearmorMilitaryVest" unlock_tier="1" />
+		</display_entry>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,80" value="1" tags="LBXDragonikAKBase,LBXBatmnSMG,LBXNeoSaber,meleeWpnBristonsBCLWS"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,80" value="1" tags="SapphirearmorMilitaryVest,RubyritearmorMilitaryVest,EmeraldritearmorMilitaryVest,SapphirearmorMilitaryLegs"/>
+			
+			<passive_effect name="CraftingTier" operation="base_add" level="4,9,24,39,46,80" value="1,2,3,4,5,5" tags="LBXDragonikAKBase"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="5,10,25,40,47,80" value="1,2,3,4,5,5" tags="LBXBatmnSMG"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="6,11,26,41,48,80" value="1,2,3,4,5,5" tags="LBXNeoSaber"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="7,12,27,42,50,80" value="1,2,3,4,5,5" tags="meleeWpnBristonsBCLWS"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="52,57,63,71,77,80" value="1,2,3,4,5,5" tags="SapphirearmorMilitaryVest"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="53,59,65,73,79,80" value="1,2,3,4,5,5" tags="RubyritearmorMilitaryVest"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="55,61,67,75,80" value="1,2,3,4,5" tags="EmeraldritearmorMilitaryVest"/>
+		</effect_group>
+	</crafting_skill>
+
+</append>
+
+	<append xpath="/progression/attributes">
+	<attribute name="EXmode"  name_key="[66CC00]EX Stats" desc_key="attEXmodeDesc" icon="ui_game_symbol_EX" min_level="1" max_level="1">					
+						
+		<effect_group>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="1"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.10" level="2"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.20" level="3"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.30" level="4"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.40" level="5"/>	
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.50" level="6"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.60" level="7"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.70" level="8"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.80" level="9"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="1.0" level="10"/>	
+
+			<effect_description level="1" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="2" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="3" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="4" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="5" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="6" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="7" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="8" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="9" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+			<effect_description level="10" desc_base="Hover your mouse here for tips." long_desc_key="DescEXmode1"/>
+		</effect_group>
+				
+	</attribute>
+	</append>
+	
+<append xpath="/progression/skills">
+	<skill name="EXAll" parent="EXmode" name_key="[FFFFFF]EX attributes" icon="ui_game_symbol_adventure"><effect_group/></skill>
+	<skill name="Prestiges" parent="EXmode" name_key="[ffdf32]Prestiges" icon="ui_game_symbol_Prestigetab"><effect_group/></skill>
+	<skill name="DragonScaleArmor" parent="EXmode" name_key="[FFFFFF]Dragon Scale Armor" icon="ui_game_symbol_muscle"><effect_group/></skill>
+	<skill name="Vampirism" parent="EXmode" name_key="[FFFFFF]Vampirism" icon="ui_game_symbol_bat"></skill>
+</append>
+
+
+<append xpath="/progression/perks">
+	<perk name="XPBoost" parent="EXAll" min_level="0" max_level="8" base_skill_point_cost="2" name_key="[66CC00]XP Boost" desc_key="DescXPBoost" icon="ui_game_symbol_skills">
+
+		<level_requirements level="1">	<requirement name="PlayerLevel" operation="GTE" value="7" desc_key="Lvl7"/></level_requirements>
+		<level_requirements level="2">	<requirement name="PlayerLevel" operation="GTE" value="14" desc_key="Lvl14"/></level_requirements>
+		<level_requirements level="3">	<requirement name="PlayerLevel" operation="GTE" value="21" desc_key="Lvl21"/></level_requirements>
+		<level_requirements level="4">	<requirement name="PlayerLevel" operation="GTE" value="28" desc_key="Lvl28"/></level_requirements>
+		<level_requirements level="5">	<requirement name="PlayerLevel" operation="GTE" value="35" desc_key="Lvl35"/></level_requirements>
+		<level_requirements level="6">	<requirement name="PlayerLevel" operation="GTE" value="42" desc_key="Lvl42"/></level_requirements>
+		<level_requirements level="7">	<requirement name="PlayerLevel" operation="GTE" value="49" desc_key="Lvl49"/></level_requirements>
+		<level_requirements level="8">	<requirement name="PlayerLevel" operation="GTE" value="56" desc_key="Lvl56"/></level_requirements>
+		
+		<effect_group>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.25" level="1"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.30" level="2"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.40" level="3"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.50" level="4"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.60" level="5"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.70" level="6"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.80" level="7"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="1.00" level="8"/>
+		
+			<effect_description level="1" desc_base="Plus 25% XP." long_desc_key="Increases your XP gain by 25%."/>
+			<effect_description level="2" desc_base="Plus 30% XP." long_desc_key="Increases your XP gain by 30%."/>
+			<effect_description level="3" desc_base="Plus 40% XP." long_desc_key="Increases your XP gain by 40%."/>
+			<effect_description level="4" desc_base="Plus 50% XP." long_desc_key="Increases your XP gain by 50%."/>
+			<effect_description level="5" desc_base="Plus 60% XP." long_desc_key="Increases your XP gain by 60%."/>
+			<effect_description level="6" desc_base="Plus 70% XP." long_desc_key="Increases your XP gain by 70%."/>
+			<effect_description level="7" desc_base="Plus 80% XP." long_desc_key="Increases your XP gain by 80%."/>
+			<effect_description level="8" desc_base="Plus 100% XP." long_desc_key="Increases your XP gain by 100%."/>
+		</effect_group>
+	</perk>
+	
+	<perk name="LuckIncense" parent="EXAll" min_level="0" max_level="7" base_skill_point_cost="3" name_key="[66CC00]Luck Incense" desc_key="DescLuckIncense" icon="ui_game_symbol_mining">
+
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="30" desc_key="Lvl30"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="60" desc_key="Lvl60"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="90" desc_key="Lvl90"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="100" desc_key="Lvl100"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="120" desc_key="Lvl120"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="140" desc_key="Lvl140"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="160" desc_key="Lvl160"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="golddiggerharvest"/>
+		
+			<passive_effect name="HarvestCount" operation="base_set" level="2" value="2" tags="golddiggerharvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="2" value="1" tags="silverHarvest"/>
+		
+			<passive_effect name="HarvestCount" operation="base_set" level="3" value="3" tags="golddiggerharvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="3" value="2" tags="silverHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="3" value="1" tags="goldHarvest"/>
+		
+			<passive_effect name="HarvestCount" operation="base_set" level="4" value="4" tags="golddiggerharvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="4" value="3" tags="silverHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="4" value="2" tags="goldHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="4" value="1" tags="diamondHarvest"/>
+	
+			<passive_effect name="HarvestCount" operation="base_set" level="5" value="5" tags="golddiggerharvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="5" value="4" tags="silverHarvest"/>	
+			<passive_effect name="HarvestCount" operation="base_set" level="5" value="3" tags="goldHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="5" value="2" tags="diamondHarvest"/>
+
+			<passive_effect name="HarvestCount" operation="base_set" level="6" value="6" tags="golddiggerharvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="6" value="5" tags="silverHarvest"/>	
+			<passive_effect name="HarvestCount" operation="base_set" level="6" value="4" tags="goldHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="6" value="3" tags="diamondHarvest"/>
+		
+			<passive_effect name="HarvestCount" operation="base_set" level="7" value="7" tags="golddiggerharvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="7" value="6" tags="silverHarvest"/>	
+			<passive_effect name="HarvestCount" operation="base_set" level="7" value="5" tags="goldHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="7" value="4" tags="diamondHarvest"/>
+
+		
+			<effect_description level="1" desc_base="LuckIncenseLV1" long_desc_key="DescLuckIncenseRank1"/>
+			<effect_description level="2" desc_base="LuckIncenseLV2" long_desc_key="DescLuckIncenseRank2"/>
+			<effect_description level="3" desc_base="LuckIncenseLV3" long_desc_key="DescLuckIncenseRank3"/>
+			<effect_description level="4" desc_base="LuckIncenseLV4" long_desc_key="DescLuckIncenseRank4"/>
+			<effect_description level="5" desc_base="LuckIncenseLV5" long_desc_key="DescLuckIncenseRank5"/>
+			<effect_description level="6" desc_base="LuckIncenseLV6" long_desc_key="DescLuckIncenseRank6"/>
+			<effect_description level="7" desc_base="LuckIncenseLV7" long_desc_key="DescLuckIncenseRank7"/>
+		</effect_group>
+	</perk>		
+	
+	<perk name="SunshineCola" parent="EXAll" min_level="0" max_level="7" base_skill_point_cost="2" name_key="[66CC00]Sunshine Cola" desc_key="After Drinking This Cola Sun Shines Upon You and Helps You Get Zombie Bags Quicker." icon="ui_game_symbol_trophy">
+
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="7" desc_key="Lvl7"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="30" desc_key="Lvl30"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="60" desc_key="Lvl60"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="80" desc_key="Lvl80"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="100" desc_key="Lvl100"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="110" desc_key="Lvl110"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="130" desc_key="Lvl130"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="LootDropProb" operation="perc_add" level="1" value="3.5"/>
+			<passive_effect name="LootDropProb" operation="perc_add" level="2" value="7"/>
+			<passive_effect name="LootDropProb" operation="perc_add" level="3" value="10.5"/>
+			<passive_effect name="LootDropProb" operation="perc_add" level="4" value="14"/>
+			<passive_effect name="LootDropProb" operation="perc_add" level="5" value="17.5"/>
+			<passive_effect name="LootDropProb" operation="perc_add" level="6" value="21"/>
+			<passive_effect name="LootDropProb" operation="perc_add" level="7" value="24.5"/>
+
+			<effect_description level="1" desc_base="10% Bag chance" long_desc_key="After Drinking Sunshine Cola.You have a 10% change of a loot bag."/>
+			<effect_description level="2" desc_base="20% Bag chance" long_desc_key="You Feel Like Sunshine Cola Is Getting Stronger.you have a 20% change of a loot bag."/>
+			<effect_description level="3" desc_base="30% Bag chance" long_desc_key="You Feel Like Sunshine Cola Is Getting Stronger.you have a 30% change of a loot bag."/>
+			<effect_description level="4" desc_base="40% Bag chance" long_desc_key="You Feel Like Sunshine Cola Is Getting Stronger.you have a 40% change of a loot bag."/>
+			<effect_description level="5" desc_base="50% Bag chance" long_desc_key="You Feel Like Sunshine Cola Is Getting Stronger.you have a 50% change of a loot bag."/>
+			<effect_description level="6" desc_base="60% Bag chance" long_desc_key="You Feel Like Sunshine Cola Is Getting Stronger.you have a 60% change of a loot bag."/>
+			<effect_description level="7" desc_base="70% Bag chance" long_desc_key="You Feel Like Sunshine Cola Is Getting Stronger.you have a 70% change of a loot bag."/>
+		</effect_group>
+	</perk>
+	
+	
+	<perk name="DragonScale1" parent="DragonScaleArmor" min_level="0" max_level="5" base_skill_point_cost="10" name_key="Dragon Scale 1" desc_key="Born To Fight Dragons Was Your Natural Thing Learning This Helps You Build Some Defense."  icon="ui_game_symbol_misc_crafting">
+		
+		<level_requirements level="1">	<requirement name="PlayerLevel" operation="GTE" value="150" desc_key="LVL 150"/></level_requirements>
+		<level_requirements level="2">	<requirement name="PlayerLevel" operation="GTE" value="200" desc_key="LVL 200"/></level_requirements>
+		<level_requirements level="3">	<requirement name="PlayerLevel" operation="GTE" value="300" desc_key="LVL 300"/></level_requirements>
+		<level_requirements level="4">	<requirement name="PlayerLevel" operation="GTE" value="400" desc_key="LVL 400"/></level_requirements>
+		<level_requirements level="5">	<requirement name="PlayerLevel" operation="GTE" value="500" desc_key="LVL 500"/></level_requirements>
+	
+		<effect_group>
+			<passive_effect name="HealthLoss" operation="perc_subtract" level="1,5" value=".024,.12"/>
+
+			<effect_description level="1" desc_base="+ 2.4% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 2.4%."/>
+			<effect_description level="2" desc_base="+ 4.8% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 4.8%."/>
+			<effect_description level="3" desc_base="+ 7.2% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 7.2%."/>
+			<effect_description level="4" desc_base="+ 9.6% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 9.6%."/>
+			<effect_description level="5" desc_base="+ 12% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 12%."/>
+		</effect_group>
+	</perk>	
+	
+	<perk name="DragonScale2" parent="DragonScaleArmor" min_level="0" max_level="5" base_skill_point_cost="15" name_key="Dragon Scale 2" desc_key="A Sensei Has Come To See your Potential and Trains You To Build Some Strong Defense."  icon="ui_game_symbol_misc_crafting">
+		
+		<level_requirements level="1">	<requirement name="PlayerLevel" operation="GTE" value="750" desc_key="LVL 750"/></level_requirements>
+		<level_requirements level="2">	<requirement name="PlayerLevel" operation="GTE" value="850" desc_key="LVL 850"/></level_requirements>
+		<level_requirements level="3">	<requirement name="PlayerLevel" operation="GTE" value="900" desc_key="LVL 900"/></level_requirements>
+		<level_requirements level="4">	<requirement name="PlayerLevel" operation="GTE" value="950" desc_key="LVL 950"/></level_requirements>
+		<level_requirements level="5">	<requirement name="PlayerLevel" operation="GTE" value="1000" desc_key="LVL 1000"/></level_requirements>
+	
+		<effect_group>
+			<passive_effect name="HealthLoss" operation="perc_subtract" level="1,5" value=".136,.2"/>
+
+			<effect_description level="1" desc_base="+ 13.6% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 13.6%."/>
+			<effect_description level="2" desc_base="+ 15.2% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 15.2%."/>
+			<effect_description level="3" desc_base="+ 16.8% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 16.8%."/>
+			<effect_description level="4" desc_base="+ 18.4% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 18.4%."/>
+			<effect_description level="5" desc_base="+ 20% Extra Defense" long_desc_key="After Reading a Magazine On How to Better Prepare Yourself Against Dragons You Start Building Up Defense by 20%."/>
+		</effect_group>
+	</perk>		
+	
+	<perk name="BloodyFangs" parent="Vampirism" min_level="0" max_level="1" base_skill_point_cost="5" name_key="Bloody Fangs" desc_key="After Injecting A Vampire Serum You've Become Part Vampire "  icon="ui_game_symbol_bat">
+		<level_requirements level="1">	<requirement name="PlayerLevel" operation="GTE" value="10" desc_key="LVL 10"/></level_requirements>
+	
+		<effect_group>
+			<requirement name="ItemHasTags" tags="knife"/>
+		
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" operation="add" value="2"> <!-- Life Leech: Gain 2 hit points on every successful attack -->
+				<requirement name="EntityTagCompare" target="other" tags="zombie,animal"/>
+				<requirement name="IsAlive" target="other"/>
+			</triggered_effect>
+
+			<effect_description level="1" desc_base="HP Regen Per Knife Slash" long_desc_key="Will Get HP Regen Per Every Successful Slash."/>
+		</effect_group>
+	</perk>			
+	
+	<perk name="PrestigeSet1" parent="Prestiges" min_level="0" max_level="3" base_skill_point_cost="10" name_key="Prestige Set 1" desc_key="Entering Prestige Mode Feeling Successful Arent ya? Well its Every 100 LVs Per Prestige." icon="ui_game_symbol_Prestigetab">
+		
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="100" desc_key="Lvl100"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="200" desc_key="Lvl200"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="300" desc_key="Lvl300"/></level_requirements>
+	
+		<effect_group>
+			<passive_effect name="HealthMax" operation="base_add" value="100,300" level="1,3"/>
+			<passive_effect name="StaminaMax" operation="base_add" value="100,300" level="1,3"/>
+			<passive_effect name="HealthLoss" operation="perc_subtract"	value=".10" level="1,3"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.05" level="1,3"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="Prestige1Token"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="Prestige1Notes1"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="Prestige1Notes2"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="Prestige1Notes3"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="LBXSapphireSeeds"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<effect_description level="1" desc_base="1st Prestige" long_desc_key="Congratulations You've Entered Your 1st Prestige!, Adds 100 HP and Stam, Adds 10% DEF, adds Small XP Gain and Can Craft Prestige 1 Tokens, Prestige 1 Quests, Saphirite and Among Other Things."/>
+		
+		</effect_group>
+	
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2" value="2" tags="Prestige2Token"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2" value="2" tags="LBXRubySeeds"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2" value="2" tags="Prestige2Notes1"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2" value="2" tags="Prestige2Notes2"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2" value="2" tags="Prestige2Notes3"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<effect_description level="2" desc_base="2nd Prestige" long_desc_key="Congratulations You've Entered Your 2nd Prestige!, Adds 100 HP and Stam, Adds 10% DEF, adds Small XP Gain and Can Craft Prestige 2 Tokens, Prestige 2 Quests, Rubyrite and Among Other Things."/>
+		
+		</effect_group>
+	
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="3" tags="Prestige3Token"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="3" tags="LBXEmeraldzSeeds"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="3" tags="Prestige3Notes1"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="3" tags="Prestige3Notes2"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="3" tags="Prestige3Notes3"/>
+				
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			
+			<effect_description level="3" desc_base="3rd Prestige" long_desc_key="Congratulations You've Entered Your 3rd Prestige!, Adds 100 HP and Stam, Adds 10% DEF, adds Small XP Gain and Can Craft Prestige 3 Tokens, Prestige 3 Quests, Emeraldrite and Among Other Things."/>
+		
+		</effect_group>
+	
+	
+	</perk>
+		
+		
+	</append>
+
+
+</configs>
